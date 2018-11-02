@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - 5.4.0
+cache:
+  directories:
+    - node_modules
+before_script:
+  - git clone --branch master https://github.com/rosescats/rosescats.github.io.git public
+script:
+  - npm run build
+after_success:
+  - cd public
+  - git config user.name "rosescats"
+  - git config user.email "qtgate@protonmail.com"
+  - git add --all .
+  - git commit -m "travis ci auto build"
+  - git push https://$Personal_access_tokens@github.com/rosescats/rosescats.github.io.git master
+branches:
+  only:
+    - hexo
