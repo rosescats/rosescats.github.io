@@ -3,17 +3,21 @@ node_js: stable
 cache:
   directories:
     - node_modules
-before_script:
-  - git clone --branch master https://github.com/rosescats/rosescats.github.io.git public
 script:
-  - npm run build
-after_success:
-  - cd public
+  - hexo g
+after_script:
+  - cd ./public
+  - git init
   - git config user.name "rosescats"
   - git config user.email "qtgate@protonmail.com"
-  - git add --all .
+  - git add .
   - git commit -m "travis ci auto build"
-  - git push https://$Personal_access_tokens@github.com/rosescats/rosescats.github.io.git master
+  - git push --force --quiet "https://${GIT_REPO_TOKEN}@{GH_REF}" master:master
+
 branches:
   only:
     - blog-source
+
+env:
+  global:
+    - GH_REF: github.com/rosescats/rosescats.github.io.git
