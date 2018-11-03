@@ -4,7 +4,7 @@ top: 0
 date: 2018-11-03
 updated: 2018-11-03
 tags: 隐私安全
-categories:TRANSLATION
+categories: TRANSLATION
 ---
 
 > 原文：[https://veekaybee.github.io/2017/02/01/facebook-is-collecting-this/](https://veekaybee.github.io/2017/02/01/facebook-is-collecting-this/)
