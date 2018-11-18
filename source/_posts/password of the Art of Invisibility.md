@@ -1,6 +1,5 @@
 ---
-title: 《隐身的艺术：著名黑客教你在大数据和老大哥时代如何保护隐私安全》第一章摘要
-subtile: 密码安全
+title:密码安全｜《隐身的艺术》第一章摘要
 top: 0
 date: 2018-11-18
 updated:
@@ -8,9 +7,9 @@ tags: 隐私安全
 categories: reading
 ---
 
-*the world's most famous hacker teaches you how to be safe in the age of big brother and big data*
+![art of invisibility](https://i.loli.net/2018/11/18/5bf13d74df111.jpg)
 
-by Kevin Mitnick
+*<center>THe Art of the Invisibility: the world's most famous hacker teaches you how to be safe in the age of big brother and big data</center>*
 
 ---
 # 密码
@@ -26,7 +25,9 @@ EPPB（Elcomsoft Phone Password Breaker）的目的是使执法机构、政府�
 可以随时查看网站 [https://www.haveibeenpwned.com](https://www.haveibeenpwned.com) 检查你的账户是否曾被盗用。
 
 在 21 世纪，我们可以做得更好，也就是用字母和数字组合的更长、更复杂的密码。以下是自动、手动两种作法。
+
 ## 自动管理密码：使用密码管理器
+
 最简单的方式是放弃创建你自己的密码，使用简单的自动化生成。有若干数字密码管理工具。它们不仅可以把密码存储在一个加密的金库里，当你需要密码的时候也允许一键获取，密码管理工具还可以为每个网站生成新的强、独特的密码。
 
 使用密码管理器会有两个问题。
@@ -36,9 +37,11 @@ EPPB（Elcomsoft Phone Password Breaker）的目的是使执法机构、政府�
 
 尽管存在这些缺点，但下列小技巧应该足够保证你的密码安全。
 
-1. **强密码口令（短语），而不是密码，应该足够长，至少 20-25 字符。**随机字符的作用最好，但人类大脑难以记住随机序列。所以需要使用一个密码管理工具。推荐使用开源的密码管理工具，只在你的电脑本地存储数据，例如 Password Safe、KeePass.
-2. **对两个不同的帐号，从不使用相同的密码。**密码管理工具可以生成和存储强而唯一的密码。
+1. **强密码口令（短语），而不是密码，应该足够长，至少 20-25 字符。** 随机字符的作用最好，但人类大脑难以记住随机序列。所以需要使用一个密码管理工具。推荐使用开源的密码管理工具，只在你的电脑本地存储数据，例如 Password Safe、KeePass.
+2. **对两个不同的帐号，从不使用相同的密码。** 密码管理工具可以生成和存储强而唯一的密码。
+
 ## 手动创建并写下密码
+
 1. 用纸写下密码，不要直接把账户、密码全部写出来，例如：中国银行：3sto7ghendp1vbs*.
 2. 用隐晦的词汇代替账户，密码只写一部分
 ## 密码保护之外的设备保护
@@ -46,13 +49,14 @@ EPPB（Elcomsoft Phone Password Breaker）的目的是使执法机构、政府�
 
 除了密码保护在线服务，也应该用密码保护个人设备（电脑、手机、平板等），需要设置一个开机密码或者屏保密码。 
 
-### 有三种常见的给手机（Android / iOS/ 其它类型）加锁方法。
+### 三种常见的给手机（Android / iOS/ 其它类型）加锁方法
+
 1. passcode：最常见的一种方式，以特别的顺序输入的一连串数字
-  1. 不要用手机号码里的数字设置
-  2. 有些设备也支持 text-based passcode , 字母与数字混合
+    1. 不要用手机号码里的数字设置
+    2. 有些设备也支持 text-based passcode , 字母与数字混合
 2. 另一种是 visual
-  1. Android：Android lock patterns：140704 种组合
-  ![图片](https://images-cdn.shimo.im/EA3rRWRUzXwQtE2P/alps.jpg!thumbnail)
+    Android：Android lock patterns：140704 种组合
+    ![alps](https://i.loli.net/2018/11/18/5bf13c5e5a3c0.jpg)
 3. 第三种：biometrics 指纹解锁，人脸识别
 
 作者建议 Biometrics 和 passcode结合使用。
