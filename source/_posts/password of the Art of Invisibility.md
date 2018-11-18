@@ -1,8 +1,8 @@
 ---
-title:密码安全｜《隐身的艺术》第一章摘要
+title: 密码安全｜《隐身的艺术》第一章摘要
 top: 0
 date: 2018-11-18
-updated:
+updated: 2018-11-18
 tags: 隐私安全
 categories: reading
 ---
@@ -12,6 +12,7 @@ categories: reading
 *<center>THe Art of the Invisibility: the world's most famous hacker teaches you how to be safe in the age of big brother and big data</center>*
 
 ---
+
 # 密码
 
 EPPB（Elcomsoft Phone Password Breaker）的目的是使执法机构、政府机构获取 iCloud 账户的软件，并且可以公开销售。
