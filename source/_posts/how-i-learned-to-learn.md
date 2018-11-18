@@ -1,10 +1,10 @@
 ---
-title: 翻译:我学会如何学习
+title: 翻译：我学会如何学习
 top: 0
 date: 2018-02-10 11:14:40
 updated:
 tags: learning
-categories: TRANSLATION
+categories: translation
 ---
 
 > 原文：[https://blog.safia.rocks/post/170003398180/how-i-learned-to-learn](https://blog.safia.rocks/post/170003398180/how-i-learned-to-learn)
