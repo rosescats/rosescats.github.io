@@ -8,7 +8,10 @@ categories: reading
 ---
 
 ![THe Art of the Invisibility: the world's most famous hacker teaches you how to be safe in the age of big brother and big data](https://i.loli.net/2018/11/18/5bf13d74df111.jpg)
-<centerTHe Art of the Invisibility: the world's most famous hacker teaches you how to be safe in the age of big brother and big data</center>
+
+<center>The Art of the Invisibility: the world's most famous hacker teaches you how to be safe in the age of big brother and big data</center>
+
+（从英文版出版社得知，这本书的中译本将由湛卢文化出版，期待！）
 
 延伸阅读文章：
 
@@ -23,10 +26,12 @@ categories: reading
 我们使用密码存在的安全问题是：
 
 - 密码字符过短；
+
 - 相同密码在不同账户重复使用；
+
 - 密码中含有账户名/个人真实属性信息。
 
-对应的对策可以有：
+对应的策略有 5 点，具体的介绍在下面：
 
 - 增加密码字符长度。
 
@@ -83,6 +88,7 @@ EPPB（Elcomsoft Phone Password Breaker）的目的是使执法机构、政府�
 使用密码管理器会有两个问题。
 
 - 其一，密码管理器使用一个管理员密码来获得其它密码。如果有人碰巧使用恶意软件感染了你的电脑，当恶意软件记录每次按键输入，会盗取密码数据和管理员密码。这下就完蛋了！黑客会利用密码管理软件的后门获取密码。
+
 - 其二，如果你丢失了管理员密码，意味着你丢了所有密码。最终，即使你可以重置每个密码，但如果有大量账户，这将会是一个很大的工作量。
 
 尽管存在这些缺点，但下列小技巧应该足够保证密码安全。
@@ -97,7 +103,9 @@ EPPB（Elcomsoft Phone Password Breaker）的目的是使执法机构、政府�
 
 1. 用纸写下密码，不要直接把账户、密码全部写出来，例如：中国银行：3sto7ghendp1vbs*.
 2. 用隐晦的词汇代替账户，密码只写一部分
+
 ## 密码保护之外的设备保护
+
 不要轻易随便与别人共享帐号密码。
 
 除了密码保护在线服务，也应该用密码保护个人设备（电脑、手机、平板等），需要设置一个开机密码或者屏保密码。 
@@ -107,9 +115,11 @@ EPPB（Elcomsoft Phone Password Breaker）的目的是使执法机构、政府�
 1. passcode：最常见的一种方式，以特别的顺序输入的一连串数字
     1. 不要用手机号码里的数字设置
     2. 有些设备也支持 text-based passcode , 字母与数字混合
+
 2. 另一种是 visual
     Android：Android lock patterns：140704 种组合
     ![alps](https://i.loli.net/2018/11/18/5bf13c5e5a3c0.jpg)
+
 3. 第三种：biometrics 指纹解锁，人脸识别
 
-作者建议 Biometrics 和 passcode 结合使用。
+建议 Biometrics 和 passcode 结合使用。
