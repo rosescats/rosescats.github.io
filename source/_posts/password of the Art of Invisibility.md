@@ -8,6 +8,7 @@ categories: reading
 ---
 
 ![THe Art of the Invisibility: the world's most famous hacker teaches you how to be safe in the age of big brother and big data](https://i.loli.net/2018/11/18/5bf13d74df111.jpg)
+<centerTHe Art of the Invisibility: the world's most famous hacker teaches you how to be safe in the age of big brother and big data</center>
 
 延伸阅读文章：
 
