@@ -41,7 +41,7 @@ categories: resources
 
 因见人数次提及，很想读一下郭沫若的《读〈随园诗话〉札记》，搜到一册非常清晰的PDF版《郭沫若全集文学编》第十六卷，其中包含了该札记及文艺论集续集：[http://memory.scu.edu.cn/UploadFiles/pdf/%E9%83%AD%E6%B2%AB%E8%8B%A5%E5%85%A8%E9%9B%86%E6%96%87%E5%AD%A6%E7%BC%9616.pdf …](http://t.co/fGZDr92KAu "http://memory.scu.edu.cn/UploadFiles/pdf/%E9%83%AD%E6%B2%AB%E8%8B%A5%E5%85%A8%E9%9B%86%E6%96%87%E5%AD%A6%E7%BC%9616.pdf")
 
-“中英文图书数字化国际合作计划（CADAL）”现有成果：7.8万册电子书，中文古籍，600dpi分辨率。 [https://archive.org/search.php?query=%28sponsor%3A%22China-America%20Digital%20Academic%20Library%20%28CADAL%29%22%29%20AND%20-mediatype%3Acollection&sort=-avg_rating%3B-num_reviews …](https://t.co/PGoO7sasxL "https://archive.org/search.php?query=%28sponsor%3A%22China-America%20Digital%20Academic%20Library%20%28CADAL%29%22%29%20AND%20-mediatype%3Acollection&sort=-avg_rating%3B-num_reviews")
+“中英文图书数字化国际合作计划（CADAL）”现有成果：7.8万册电子书，中文古籍，600dpi分辨率。 [https://archive.org/search.php?query=%28sponsor%3A%22China-America%20Digital%20Academic%20Library%20%28CADAL%29%22%29%20AND%20-mediatype%3Acollection&sort=-avg_rating%3B-num_reviews](https://archive.org/search.php?query=%28sponsor%3A%22China-America%20Digital%20Academic%20Library%20%28CADAL%29%22%29%20AND%20-mediatype%3Acollection&sort=-avg_rating%3B-num_reviews)
 
 10000+ 报纸分布世界地图： [http://newspapermap.com ](http://t.co/uq7gJgJOc3 "http://newspapermap.com") 。以颜色区分语种，嗯，汉语被归在了“Other”里。via [@**newspapermap**](https://twitter.com/newspapermap)
 
@@ -200,25 +200,25 @@ header {
  }
 ```
 
-LightPDF 線上轉檔Word、編輯 PDF，免費無檔案大小時長限制 [http://www.playpcesor.com/2018/02/lightpdf-word-pdf.html …](https://t.co/9u7EFnEXfd "http://www.playpcesor.com/2018/02/lightpdf-word-pdf.html")
+LightPDF 線上轉檔Word、編輯 PDF，免費無檔案大小時長限制 [http://www.playpcesor.com/2018/02/lightpdf-word-pdf.html](http://www.playpcesor.com/2018/02/lightpdf-word-pdf.html)
 
 一个可以让你下载20多个网站视频的网站，不需要什么插件与客户端，只要播放地址既可以给你真实下载地址，绝对值得收藏。什么YouTube.Facebook.汤不热上的视都不是事。https://savieo.com
 
-The Greek Alphabet - Cheat sheet for reading formulas in Machine Learning, Economics, and Finance. 附：如何在 Ubuntu Linux 下用 ppmtopdf 将PDF转换为图片 [http://t.cn/RRrZBzG ](https://t.co/LQsYP0COyu "http://t.cn/RRrZBzG")
+The Greek Alphabet - Cheat sheet for reading formulas in Machine Learning, Economics, and Finance. 附：如何在 Ubuntu Linux 下用 ppmtopdf 将PDF转换为图片 [http://t.cn/RRrZBzG](http://t.cn/RRrZBzG)
 
-那个可以获取「学术论文」的 SciHub 进化 3.0 版本，拥有了易用的图形界面 [http://ift.tt/2mLe6aK](https://t.co/jWJr41DBDl "http://ift.tt/2mLe6aK")
+那个可以获取「学术论文」的 SciHub 进化 3.0 版本，拥有了易用的图形界面 [http://ift.tt/2mLe6aK](http://ift.tt/2mLe6aK)
 
-最近看的两篇和 iCloud 有关的文章：《科普：进一步了解 iCloud「照片」、「照片图库」和「照片流」》 [https://sspai.com/post/31553 ](https://t.co/Hs660jqAcT "https://sspai.com/post/31553") 和《不想停用 iCloud？不妨迁移数据到其它 Apple ID》 [https://sspai.com/post/42766 ](https://t.co/8zBu6QgnuP "https://sspai.com/post/42766") 可以说少数派真的汇集了中文圈最优秀的相关领域作者了，比 Apple 官方文档写得还详细。
+最近看的两篇和 iCloud 有关的文章：《科普：进一步了解 iCloud「照片」、「照片图库」和「照片流」》 [https://sspai.com/post/31553 ](https://sspai.com/post/31553) 和《不想停用 iCloud？不妨迁移数据到其它 Apple ID》 [https://sspai.com/post/42766](https://sspai.com/post/42766) 可以说少数派真的汇集了中文圈最优秀的相关领域作者了，比 Apple 官方文档写得还详细。
 
-Self-hosted Server 新增 Web 应用：Lychee。Lychee 是一个好看又好用的照片管理工具，包括专辑归类、与朋友分享、选择是否公开/私有、支持 EXIF/IPTC 元数据、导入等不错的功能。([https://selfhostedserver.com/features ](https://t.co/psTi0DyRIw "https://selfhostedserver.com/features") / [https://lychee.electerious.com ](https://t.co/UXQQrGwXdV "https://lychee.electerious.com"))
+Self-hosted Server 新增 Web 应用：Lychee。Lychee 是一个好看又好用的照片管理工具，包括专辑归类、与朋友分享、选择是否公开/私有、支持 EXIF/IPTC 元数据、导入等不错的功能。([https://selfhostedserver.com/features](https://selfhostedserver.com/features) / [https://lychee.electerious.com](https://lychee.electerious.com))
 
-你遇见过网页由于要下载字体，导致内容一片空白吗？ CSS 现在有一个新属性 font-display，可以解决这个问题，从而可以放心地在网页加载字体了。 [https://font-display.glitch.me/ ](https://t.co/DZDMlvRdjS "https://font-display.glitch.me/")
+你遇见过网页由于要下载字体，导致内容一片空白吗？ CSS 现在有一个新属性 font-display，可以解决这个问题，从而可以放心地在网页加载字体了。 [https://font-display.glitch.me/](https://font-display.glitch.me/)
 
-【可视化小百科+工具箱】Google News Lab与一家可视化制作公司Adioma合作，将市面上出现的所有可视化都进行了分类：图表、相关书籍和工具。读者们可以在这个小宇宙页面上，看到三大类代表的星球独立自转，简洁明了，奇趣又美观。[https://buff.ly/2AlLzgI ](https://t.co/e8Ld1TEgoA "https://buff.ly/2AlLzgI")
+【可视化小百科+工具箱】Google News Lab与一家可视化制作公司Adioma合作，将市面上出现的所有可视化都进行了分类：图表、相关书籍和工具。读者们可以在这个小宇宙页面上，看到三大类代表的星球独立自转，简洁明了，奇趣又美观。[https://buff.ly/2AlLzgI](https://buff.ly/2AlLzgI)
 
-【不会编程，也可轻松学地图可视化】CartoDB是一款开源网络应用程序和交互式地图制作工具，以提供“一键式制图”功能闻名。起初CartoDB和数据新闻相差千里，是两名西班牙研究生物多样性和自然保护的科学家为了更好展示研究成果而建立的。[https://buff.ly/2CovJ6e ](https://t.co/3OsdSLc1RU "https://buff.ly/2CovJ6e")
+【不会编程，也可轻松学地图可视化】CartoDB是一款开源网络应用程序和交互式地图制作工具，以提供“一键式制图”功能闻名。起初CartoDB和数据新闻相差千里，是两名西班牙研究生物多样性和自然保护的科学家为了更好展示研究成果而建立的。[https://buff.ly/2CovJ6e](https://buff.ly/2CovJ6e)
 
-Git In Practice：面向中到高级用户的 Git 图书，原由 Manning 出版，现由作者开源到 GitHub 供免费阅读。([https://github.com/GitInPractice/GitInPractice …](https://t.co/7Dtmq4Jnmo "https://github.com/GitInPractice/GitInPractice"))
+Git In Practice：面向中到高级用户的 Git 图书，原由 Manning 出版，现由作者开源到 GitHub 供免费阅读。([https://github.com/GitInPractice/GitInPractice](https://github.com/GitInPractice/GitInPractice))
 
 小知识 很多人不知道 text-decoration-color 和 text-decoration-style，可以设置下划线的颜色和样式。（来自[~~@~~**AllThingsSmitty**](https://twitter.com/AllThingsSmitty)）
 ```
@@ -227,9 +227,9 @@ a:link {
  }
 ```
 
-如果你还在使用 tinypng 压缩 PNG 图片，可以考虑改用 upng。它的压缩率更好，还可以调节图片清晰度，换取更小的体积。[http://upng.photopea.com/ ](https://t.co/4ntqKDbZdx "http://upng.photopea.com/")
+如果你还在使用 tinypng 压缩 PNG 图片，可以考虑改用 upng。它的压缩率更好，还可以调节图片清晰度，换取更小的体积。[http://upng.photopea.com/ ](http://upng.photopea.com/)
 
-【ProPublica数据学院】自Propublica数据学院开办两年以来，已有千余人报名参加，每年平均录取12人。无法参与实体课堂也没关系，学院录制了5门课的教学视频，分别是编程基础、网站运作、HTML、CSS基础和进阶。教学链接：[https://buff.ly/2z33sDu ](https://t.co/PHIcj8i6ev "https://buff.ly/2z33sDu")
+【ProPublica数据学院】自Propublica数据学院开办两年以来，已有千余人报名参加，每年平均录取12人。无法参与实体课堂也没关系，学院录制了5门课的教学视频，分别是编程基础、网站运作、HTML、CSS基础和进阶。教学链接：[https://buff.ly/2z33sDu](https://buff.ly/2z33sDu)
 
 ## 网课类
 
@@ -263,42 +263,42 @@ What do we know about the [**autism**](https://twitter.com/hashtag/autism?src=ha
 
 转[@**JZ**](https://twitter.com/jz)周峻纬 [http://www.comh.ca/antidepressant-skills/adult/resources/index-asw.cfm](http://www.comh.ca/antidepressant-skills/adult/resources/index-asw.cfm) 《抑郁自我护理手册》，为那些没有条件寻求心理干预的人准备。 BIlsker教授几十年行医经验和科研结果的总结，专门为非专业人士准备，避免了使用专业词汇和生僻词语。 点开后找到Chinese simplified就可以打开简体中文版。以上资源免费，已通过作者本人授权。(from @knifepoint)
 
-I wrote this in 2010 about attention & other 21st century literacies; I'm usually around 10 yrs too early, so it's about right for now:https://er.educause.edu/articles/2010/10/attention-and-other-21stcentury-social-media-literacies (from @hrheingold)
+I wrote this in 2010 about attention & other 21st century literacies; I'm usually around 10 yrs too early, so it's about right for now:[https://er.educause.edu/articles/2010/10/attention-and-other-21stcentury-social-media-literacies](https://er.educause.edu/articles/2010/10/attention-and-other-21stcentury-social-media-literacies) (from @hrheingold)
 
-中文版《独裁者手册》之和谐手册：https://kesalin.github.io/blog/2015/03/26/miss-of-the-dictatos-handbook/
+中文版《独裁者手册》之和谐手册：[https://kesalin.github.io/blog/2015/03/26/miss-of-the-dictatos-handbook](https://kesalin.github.io/blog/2015/03/26/miss-of-the-dictatos-handbook/)
 
-網路大數據與個人隱私自決 from Medium [http://bit.ly/2puqBch ](https://t.co/1CTlw1LavA "http://bit.ly/2puqBch") 但主要是想推這本報告《Network of Control：A Report on Corporate Surveillance, Digital Tracking, Big Data & Privacy》，跟著文內連結可以下載免費英文全文 PDF。
+網路大數據與個人隱私自決 from Medium [http://bit.ly/2puqBch ](http://bit.ly/2puqBch) 但主要是想推這本報告《Network of Control：A Report on Corporate Surveillance, Digital Tracking, Big Data & Privacy》，跟著文內連結可以下載免費英文全文 PDF。
 
-四个简单方法，从今天开始戒糖: https://cn.nytimes.com/health/20180320/4-easy-ways-to-cut-down-your-sugar-intake/?utm_source=tw-nytimeschinese&utm_medium=social&utm_campaign=cur
+四个简单方法，从今天开始戒糖: [https://cn.nytimes.com/health/20180320/4-easy-ways-to-cut-down-your-sugar-intake](https://cn.nytimes.com/health/20180320/4-easy-ways-to-cut-down-your-sugar-intake)
 
-新加坡居然登记了每一棵树，目前全国共有56万4266棵树。 而且，还可以下载 JSON 文件，里面是每棵树的坐标、年龄、生长速度等数据。（via [~~@~~**cheeaun**](https://twitter.com/cheeaun)）[https://www1.nparks.gov.sg/trees](https://www1.nparks.gov.sg/trees)
+新加坡居然登记了每一棵树，目前全国共有56万4266棵树。 而且，还可以下载 JSON 文件，里面是每棵树的坐标、年龄、生长速度等数据。（via [@**cheeaun**](https://twitter.com/cheeaun)）[https://www1.nparks.gov.sg/trees](https://www1.nparks.gov.sg/trees)
 
-Learn-Anything 這網站很有趣、野心很大，希望讓有心想自學任何知識的人，都能搜尋獲得「學習路徑」，那些有前後關聯或必要性，甚至不會出現在一般搜尋引擎的資源。 [https://learn-anything.xyz](https://t.co/a1HjH6T3wd "https://learn-anything.xyz") (from @wastemobile)
+Learn-Anything 這網站很有趣、野心很大，希望讓有心想自學任何知識的人，都能搜尋獲得「學習路徑」，那些有前後關聯或必要性，甚至不會出現在一般搜尋引擎的資源。 [https://learn-anything.xyz](https://learn-anything.xyz) (from @wastemobile)
 
-【如何均衡媒体饮食】每天平均12小时媒体摄入量：尽可能多的从书籍等摄取提升自己的养分；3小时阅读好的报纸陶冶性情；2小时看剧打游戏；1小时处理邮件等人际关系；半小时处理刷社交媒体；避免虚假内容 [https://wanqu.co/p/6307 ](https://t.co/3rahyq3Pw2 "https://wanqu.co/p/6307")
+【如何均衡媒体饮食】每天平均12小时媒体摄入量：尽可能多的从书籍等摄取提升自己的养分；3小时阅读好的报纸陶冶性情；2小时看剧打游戏；1小时处理邮件等人际关系；半小时处理刷社交媒体；避免虚假内容 [https://wanqu.co/p/6307 ](https://wanqu.co/p/6307)
 
-推荐一本开源电子书《图说 Hadoop》，介绍最流行的大数据管理工具 Hadoop，面向新手，使用卡通图画介绍入门的基本概念。原文是英文，但非常浅显，很好懂。[http://hadoopilluminated.com/ ](https://t.co/6LKvgmi167 "http://hadoopilluminated.com/")
+推荐一本开源电子书《图说 Hadoop》，介绍最流行的大数据管理工具 Hadoop，面向新手，使用卡通图画介绍入门的基本概念。原文是英文，但非常浅显，很好懂。[http://hadoopilluminated.com/](http://hadoopilluminated.com/)
 
-大连理工大学出版社下载中心，可以下载到他们出版的各种教材的相关课件、音视频等资料，不管有没有买过书：[http://dutp.dlut.edu.cn/xgxz1/MP3ykjxzzx.htm …](https://t.co/gNEAGvPN6O "http://dutp.dlut.edu.cn/xgxz1/MP3ykjxzzx.htm")
+大连理工大学出版社下载中心，可以下载到他们出版的各种教材的相关课件、音视频等资料，不管有没有买过书：[http://dutp.dlut.edu.cn/xgxz1/MP3ykjxzzx.htm](http://dutp.dlut.edu.cn/xgxz1/MP3ykjxzzx.htm)
 
-《默克诊疗手册》，在美加以外地区称为《默沙东诊疗手册》，是世界上使用最广泛的医学信息资源之一。 本手册致力于到 2020 年向各大洲高达 30 亿卫生保健专业人员和病人提供当前最佳的医学信息。 [https://www.msdmanuals.cn ](https://t.co/7QxxNoNLxH "https://www.msdmanuals.cn")
+《默克诊疗手册》，在美加以外地区称为《默沙东诊疗手册》，是世界上使用最广泛的医学信息资源之一。 本手册致力于到 2020 年向各大洲高达 30 亿卫生保健专业人员和病人提供当前最佳的医学信息。[https://www.msdmanuals.cn ](https://www.msdmanuals.cn)
 
-一个超酷的网站！！！！！ [http://stars.chromeexperiments.com/ ](https://t.co/jxFzQ17l6g "http://stars.chromeexperiments.com/") 刚进去看到loading the galaxy我心就开始怦怦跳了！！！ 真的要看啊超酷超酷！
+一个超酷的网站！！！！！ [http://stars.chromeexperiments.com/](http://stars.chromeexperiments.com/) 刚进去看到loading the galaxy我心就开始怦怦跳了！！！ 真的要看啊超酷超酷！
 
-由于中国政府并未公布工人罢工和抗争的官方统计数字，中国劳工通讯的工人集体行动地图 [~~@~~**bagongditu**](https://twitter.com/bagongditu) 是公众唯一能够查阅的数据库。自2011年起，地图以中英双语收录了近10000宗工人集体行动的详细资料 [http://maps.clb.org.hk/strikes/zh-cn ](https://t.co/yJVeO2j9Bp "http://maps.clb.org.hk/strikes/zh-cn")
+由于中国政府并未公布工人罢工和抗争的官方统计数字，中国劳工通讯的工人集体行动地图 [@**bagongditu**](https://twitter.com/bagongditu) 是公众唯一能够查阅的数据库。自2011年起，地图以中英双语收录了近10000宗工人集体行动的详细资料 [http://maps.clb.org.hk/strikes/zh-cn](http://maps.clb.org.hk/strikes/zh-cn)
 
-居然有人真的做出了博尔赫斯笔下的《通天塔图书馆》，可以搜索、也可以一页一页看。 [https://libraryofbabel.info/ ](https://t.co/qAilPTTvdI "https://libraryofbabel.info/")
+居然有人真的做出了博尔赫斯笔下的《通天塔图书馆》，可以搜索、也可以一页一页看。 [https://libraryofbabel.info/](https://libraryofbabel.info/)
 
-Yale大学有个很有趣的地理经济学（GEcon）的数据库：[http://gecon.yale.edu ](https://t.co/tXeRuoW69k "http://gecon.yale.edu") ，展示了一个国家每个地区经济水平分布图。可以看到，每一个国家的GDP基本都是集中在几个大城市（都市圈）。如果再和推特的话唠城市做一个对比，估计可以得到一些很有趣的结论~
+Yale大学有个很有趣的地理经济学（GEcon）的数据库：[http://gecon.yale.edu](http://gecon.yale.edu) ，展示了一个国家每个地区经济水平分布图。可以看到，每一个国家的GDP基本都是集中在几个大城市（都市圈）。如果再和推特的话唠城市做一个对比，估计可以得到一些很有趣的结论~
 
-又发现一个杀时间网站：[http://brainden.com/ ](https://t.co/M0JMVQcjms "http://brainden.com/") ，包含各种有趣的英文谜语，逻辑题，智力游戏，脑筋急转弯等。
+又发现一个杀时间网站：[http://brainden.com/](http://brainden.com/) ，包含各种有趣的英文谜语，逻辑题，智力游戏，脑筋急转弯等。
 
-上海图书馆新发布的家谱知识服务平台“华人家谱总目”（[http://jp.library.sh.cn/ ](https://t.co/Q1imrvgd1F "http://jp.library.sh.cn/")），提供基于人、地、时、事、堂号多维分面浏览检索家谱信息，并以可交互时间轴、地图展示某姓氏在某一地理空间分布情况。该家谱知识库的元数据也以关联数据形式开放，提供API接口。
+上海图书馆新发布的家谱知识服务平台“华人家谱总目”（[http://jp.library.sh.cn/ ](http://jp.library.sh.cn/)），提供基于人、地、时、事、堂号多维分面浏览检索家谱信息，并以可交互时间轴、地图展示某姓氏在某一地理空间分布情况。该家谱知识库的元数据也以关联数据形式开放，提供API接口。
 
-学术界海盗湾Sci-Hub，2011年哈萨克斯坦女大学生 Alexandra Elbakyan 所建，旨在去除所有学术障碍，免费提供4千7百万论文获取，去年被Elsevier起诉，网站关了开，开了关，一度移入暗网。现在的域名是：[http://sci-hub.io/ ](https://t.co/AvCRLC6LUy "http://sci-hub.io/")
+学术界海盗湾Sci-Hub，2011年哈萨克斯坦女大学生 Alexandra Elbakyan 所建，旨在去除所有学术障碍，免费提供4千7百万论文获取，去年被Elsevier起诉，网站关了开，开了关，一度移入暗网。现在的域名是：[http://sci-hub.io/](http://sci-hub.io/)
 
-美国英语与英国英语的词汇差异 [http://themindcircle.com/british-vs-american-english-differences/ …](https://t.co/3HbHx9Obmg "http://themindcircle.com/british-vs-american-english-differences/")
+美国英语与英国英语的词汇差异 [http://themindcircle.com/british-vs-american-english-differences/](http://themindcircle.com/british-vs-american-english-differences/)
 
-很赞的网站：Wireless Philosophy，简称 Wi-Phi ，一个开放的哲学网站，致力于以轻松有趣的动画形式阐释哲学问题及哲学思维方式。建于2013年，现在已经有105个哲学动画上线了。 [http://www.wi-phi.com/ ](https://t.co/D6un11hOY7 "http://www.wi-phi.com/")
+很赞的网站：Wireless Philosophy，简称 Wi-Phi ，一个开放的哲学网站，致力于以轻松有趣的动画形式阐释哲学问题及哲学思维方式。建于2013年，现在已经有105个哲学动画上线了。 [http://www.wi-phi.com/](http://www.wi-phi.com/)
 
-GPlates Portal 首次发布了可交互的3D数字化世界海底地图：[http://portal.gplates.org/#SEAFLOOR ](http://t.co/1pGcygoU6g "http://portal.gplates.org/#SEAFLOOR") 。赞。由悉尼大学的一个研究团队制作。
+GPlates Portal 首次发布了可交互的3D数字化世界海底地图：[http://portal.gplates.org/#SEAFLOOR](http://portal.gplates.org/#SEAFLOOR) 。赞。由悉尼大学的一个研究团队制作。
