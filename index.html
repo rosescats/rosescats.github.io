@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>槑笔记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="槑笔记">
+<meta property="og:url" content="https://rosescats.github.io/index.html">
+<meta property="og:site_name" content="槑笔记">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="槑笔记">
+  
+    <link rel="alternate" href="/atom.xml" title="槑笔记" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">槑笔记</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">learning how to learn</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://rosescats.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2019-04-05-hidden-xmind-zen-watermark" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/05/2019-04-05-hidden-xmind-zen-watermark/" class="article-date">
+  <time datetime="2019-04-05T00:00:00.000Z" itemprop="datePublished">2019-04-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/05/2019-04-05-hidden-xmind-zen-watermark/">XMind ZEN 隐藏导出水印的方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://www.xmind.net" target="_blank" rel="noopener">XMind ZEN</a> 是继 XMind8 新出的思维导图绘制工具，两者功能差不多。</p>
+<p>如果不考虑模板，一直使用免费版就足够了，但导出图片、PDF会自带背景水印。</p>
+<p>下面讲解如何在不使用第三方奇奇怪怪的破解软件的情况下，如何去掉/隐藏水印。</p>
+<blockquote>
+<p>系统：Ubuntu</p>
+<p>软件版本：XMind ZEN 9.0.3</p>
+<p>语言环境：English</p>
+</blockquote>
+<h3 id="第一步：下载安装-XMind-ZEN"><a href="#第一步：下载安装-XMind-ZEN" class="headerlink" title="第一步：下载安装 XMind ZEN"></a>第一步：下载安装 XMind ZEN</h3><p>不多说，从 XMind 官网下载：<a href="https://www.xmind.net/download/" target="_blank" rel="noopener">https://www.xmind.net/download/</a></p>
+<h3 id="第二步：修改水印文件"><a href="#第二步：修改水印文件" class="headerlink" title="第二步：修改水印文件"></a>第二步：修改水印文件</h3><p>XMind ZEN 在 Ubuntu 默认安装在了目录 <code>/opt/XMind ZEN/</code>，水印文件在 <code>/opt/XMind ZEN/resources/app/out/imgs</code> 目录下面，文件格式是 <code>.svg</code>。</p>
+<p>对应导出PNG图片、PDF、打印，需要修改的文件有：</p>
+<ol>
+<li><code>pdf-footer-en-US.svg</code></li>
+<li><code>png-watermark-en-US.svg</code></li>
+<li><code>print-watermark-en-US.svg</code></li>
+</ol>
+<p>前两个文件用 <code>gedit</code> 编辑打开，删除所有内容并保存。</p>
+<p>print 水印文件用 <code>gedit</code> 打开编辑，修改 <code>opacity=0.2</code> 参数，改为 <code>0</code>，就是全透明了，隐藏水印。</p>
+<p>如果系统语言是中文简体，则分别修改结尾是 <code>zh-CN</code> 的文件。</p>
+<p><img src="https://i.loli.net/2019/04/05/5ca74f8a553fd.png" alt="儿童教育学科体系"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://rosescats.github.io/2019/04/05/2019-04-05-hidden-xmind-zen-watermark/" data-id="cju42qpm70002kft519gsaj9h" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XMind-ZEN/">XMind ZEN</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2019-02-12-rip-do-not-track-ignored-zh" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/12/2019-02-12-rip-do-not-track-ignored-zh/" class="article-date">
+  <time datetime="2019-02-12T00:00:00.000Z" itemprop="datePublished">2019-02-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/translation/">translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/12/2019-02-12-rip-do-not-track-ignored-zh/">翻译：大家忽视了「不要跟踪」隐私标准</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原文是<a href="https://www.howtogeek.com/fyi/rip-do-not-track-the-privacy-standard-everyone-ignored/" target="_blank" rel="noopener">RIP “Do Not Track,” the Privacy Standard Everyone Ignored</a></p>
+<p>作者：<a href="https://twitter.com/chrisbhoffman" target="_blank" rel="noopener">Chris Hoffman</a></p>
+<p>「不跟踪」有一个崇高的目标：在每个浏览器中都有一个简单的选项，告诉网站不要跟踪你的浏览记录。原以为它的确做到了，但问题是：网站并不在乎这一点。</p>
+<p>正如我们在2012年指出的那样，<a href="https://www.howtogeek.com/126705/why-enabling-do-not-track-doesnt-stop-you-from-being-tracked/" target="_blank" rel="noopener">「不跟踪」选项并不能阻止你被跟踪</a>。只要连接一个网站，它就会发送一条特殊的信息，要求网站不要跟踪。绝大多数网站忽略了这一点，从未真正改变。网站忽略请求不会得到惩罚，也没有理由尊重「不跟踪」的请求。</p>
+<p>尽管如此，「不跟踪」已经拖了好几年。这个选项是 Google Chrome、Mozilla Firefox、Apple Safari、Microsoft Edge、Internet Explorer 浏览器的一部分。如果你因为在网上被跟踪而感到沮丧，那么可以勾选这个选项，可能会让你感觉好一点，但实际上这是误导，什么也没有做。</p>
+<p>事实上，「不跟踪」已经被用来跟踪用户。如果你已经启用了「不跟踪」，那么关于你的额外信息就会被跟踪了。例如，广告商可以此投放与隐私相关的广告。</p>
+<p>一段时间以来，每个人都满足于忽略这个毫无用处的选项，但现在看来 DNT 终于崩溃了。正如 <a href="https://spreadprivacy.com/do-not-track/" target="_blank" rel="noopener">DuckDuckGo</a> 提醒，苹果公司正从 Safari 浏览器<a href="https://developer.apple.com/documentation/safari_release_notes/safari_12_1_release_notes" target="_blank" rel="noopener">移除</a>「不跟踪」设置项。就像 <a href="https://gizmodo.com/apple-is-removing-do-not-track-from-safari-1832400768" target="_blank" rel="noopener">Gizmodo</a> 发现的那样，DNT 标准讨论工作在2019年1月17日悄然<a href="https://www.w3.org/TR/tracking-dnt/" target="_blank" rel="noopener">结束</a>。随着标准被放弃、第一个浏览器移除它，我们希望其它浏览器开发商也能追随苹果的脚步。</p>
+<p>这样不好吗？不。「不跟踪」从没有消失，但被网站忽视。在这一点上，「不跟踪」选项起到了安慰剂的作用，仅仅通过显示「不跟踪」误导用户。去掉 DNT 已经是很久以前的事情了。</p>
+<p>「不跟踪」的发展历史是混乱的。微软只是让问题变得更糟糕，2010年，IE10 默认启用了这个功能，导致更多网站忽略了它。这点特别有趣，因为<a href="https://privacy.microsoft.com/en-us/privacystatement/" target="_blank" rel="noopener">微软</a>从来就不遵守 DNT 设置，换言之「因为对于如何解释 DNT 还没有达成共识，微软服务目前没有对浏览器 DNT 作出反应。」</p>
+<p>包含跟踪保护功能的当代浏览器不会等到业界达成「共识」之后才开始跟进。相反，他们主动屏蔽追踪器。苹果的 Safari 浏览器含有「<a href="https://www.howtogeek.com/327773/how-safaris-new-intelligent-tracking-prevention-works/" target="_blank" rel="noopener">智能跟踪保护</a>」，可以避免没有直接访问的网站跟踪用户。Mozilla Firefox 提供了一个<a href="https://support.mozilla.org/en-US/kb/what-happened-tracking-protection" target="_blank" rel="noopener">内容拦截功能</a>，可以拦截已知的跟踪器。</p>
+<p>这并不是说跟踪或<a href="https://www.howtogeek.com/341487/how-to-opt-out-of-targeted-ads-around-the-web/" target="_blank" rel="noopener">定向广告</a>一定是坏事。有支持也有反对的理由。但是，作为一个团体，我们应该讨论它，而不是用一个误导性的选项分散注意力，因为它实际上什么都没有做。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://rosescats.github.io/2019/02/12/2019-02-12-rip-do-not-track-ignored-zh/" data-id="cju42qplu0000kft5p4gymju7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/隐私安全/">隐私安全</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-winter-hometown" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/02/winter-hometown/" class="article-date">
+  <time datetime="2019-01-02T00:00:00.000Z" itemprop="datePublished">2019-01-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/图片/">图片</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/02/winter-hometown/">无题旧图</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>去年冬季回家拍的 冰、雪、天。</p>
+<p><img src="https://i.loli.net/2019/01/02/5c2cbafe6ed03.jpg" alt="tumblr_nnba01NkxX1t03x8ro1_1280"></p>
+<p><img src="https://i.loli.net/2019/01/02/5c2cbafe9cf3f.jpg" alt="tumblr_nnba01NkxX1t03x8ro2_1280"></p>
+<p><img src="https://i.loli.net/2019/01/02/5c2cbaff4e6a8.jpg" alt="tumblr_nnba01NkxX1t03x8ro3_1280"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://rosescats.github.io/2019/01/02/winter-hometown/" data-id="cju42qpn8001bkft5ujr0y6bc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/图片/">图片</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-learning/e-learning-30-resource" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/24/learning/e-learning-30-resource/" class="article-date">
+  <time datetime="2018-11-24T00:00:00.000Z" itemprop="datePublished">2018-11-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/learn/">learn</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/24/learning/e-learning-30-resource/">资源｜E-Learning 3.0 MOOC</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>E-learning 3.0 <a href="https://el30.mooc.ca/cgi-bin/page.cgi?module=9" target="_blank" rel="noopener">第五节课</a>的话题是资源（resources）。</p>
+<p>内容概要如下：</p>
+<p>从早期开始，互联网就将分享的理念和更多消费驱动的内容消费模式进行了对比。新闻网、邮件列表、网站和文件传输服务便于交换想法和信息。</p>
+<p>这些早期网络越来越被锁定，人与数据之间曾经无缝的交换被越来越多锁定在付费墙和内容孤岛上。web3 意在很大程度上对抗这个现象，并且互联网上的开发者正研发一种新的基础设施，它将反抗封闭的努力。</p>
+<p>这些技术建立在过去文件共享网络的一些基础上，但是增加了凸显它们集中控制和监管弱点的要素。其中一个例子是 IPFS（Interplanetary File System）和它的同类 IPLD（Interplanetary Linked Data）。这些新的文件共享系统不是依靠互联网地址定位内容，而是使用数据或内容的哈希值（hash）作为地址，使数据分布在云端，可以从最便捷的源头访问。</p>
+<p>我们已经看到更多传统的内容，例如书籍、媒体和音乐，通过 IPFS 分布。类似的技术正被用于支持更复杂的内容。例如分布式应用（dApps）、订阅、列表、协议网络（contract network），甚至 DAO（decentralized autonomous organization）分布式组织。由于没有中心点，没有任何办法控制这些类型的内容，从而引起对其合法性和漏洞的质疑。</p>
+<p>这些概念被用于介绍一种新型开放教育资源（OER,open educational resource）、教育内容可寻址资源（CARE, content addressable resources for education），以及 CARE 和 CARENet 的相关概念。</p>
+<p>这些资源可能是从课程和程序到事件访问和录制到上述一些高级学习应用程序的任何内容，将通过内容可寻址网络打包和分发，因此，它们永久开放，不可能被商业服务封闭。由于不变性、哈希寻址过程的特点，确保了创建的内容就是接收到的内容。</p>
+<p>教育内容可寻址资源的概念解决了开放教育资源（OER）可持续性问题，因为老师和学习者的分布式网络通过他们的使用来维持它们。</p>
+<p>它还创建了将数据、媒体、软件和人连接起来的资源图形的创建机制，重新定义了我们对开放课程（开放教学法）的观点，不是由许可证和机构主导，而是由人和做法主导。</p>
+<h3 id="IPFS-Beaker-Browswer-安装方法"><a href="#IPFS-Beaker-Browswer-安装方法" class="headerlink" title="IPFS/Beaker Browswer 安装方法"></a>IPFS/Beaker Browswer 安装方法</h3><p>创建分布式资源网络的工具：<a href="https://docs.ipfs.io/introduction/install/" target="_blank" rel="noopener">IPFS</a>, <a href="https://beakerbrowser.com/" target="_blank" rel="noopener">Beaker Browser</a>, <a href="https://indieweb.org/Fritter" target="_blank" rel="noopener">Fritter</a>.</p>
+<p>Fritter 是类似 P2P Twitter 的应用程序, 它通过 <a href="https://indieweb.org/Dat" target="_blank" rel="noopener">Dat</a>访问，目前可以使用 Beaker 浏览器打开。</p>
+<p><a href="https://www.youtube.com/watch?v=q9hUFAlJA94" target="_blank" rel="noopener">这个视频</a>是关于如何在 Windows 系统安装 IPFS. 如何添加一个网站到 IPFS 可以参考<a href="https://www.youtube.com/watch?v=Gm6vqIlOIOU" target="_blank" rel="noopener">这个视频</a>。</p>
+<p>安装 Beaker Browser 并创建网站的方法： <a href="https://www.youtube.com/watch?v=8pTE4KCzzRc" target="_blank" rel="noopener">https://www.youtube.com/watch?v=8pTE4KCzzRc</a></p>
+<p>使用 Dat 分享内容的方法，以 Dweb 为例：<a href="https://www.youtube.com/watch?v=8KpqKWMZcIk" target="_blank" rel="noopener">https://www.youtube.com/watch?v=8KpqKWMZcIk</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://rosescats.github.io/2018/11/24/learning/e-learning-30-resource/" data-id="cju42qpo3002jkft50018sl43" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/el30/">el30</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-twitter-likes-resources-wiki" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/22/twitter-likes-resources-wiki/" class="article-date">
+  <time datetime="2018-11-22T00:00:00.000Z" itemprop="datePublished">2018-11-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/resources/">resources</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/22/twitter-likes-resources-wiki/">Twitter 收藏的各种资源整理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="视频类"><a href="#视频类" class="headerlink" title="视频类"></a>视频类</h2><p>国际非暴力冲突研究中心（<a href="https://twitter.com/civilresistance" target="_blank" rel="noopener">@<strong>civilresistance</strong></a>）推出五部精彩的关于非暴力抗争的纪录片，分别是《一种更强大的力量》、《橙色革命》、《推翻独裁者》、《面对真相》、《埃及：被打断的革命？》，并有包括中文在内的20多种语言的配音。请收藏、观看、传播。免费。<a href="https://www.nonviolent-conflict.org/icncfilms/" target="_blank" rel="noopener">https://www.nonviolent-conflict.org/icncfilms/</a> (from @tengbiao)</p>
+<p>给各位推荐近期不错的片子 : 解除好友2 :暗网 技术宅大力推荐 磁力<code>magnet:?xt=urn:btih:9BABF843AC5247DB7CBBF46C1D0CC14E04FA1387</code> (from @886106)</p>
+<p>一个新的纪录片推荐 ‘Free Speech, Parler Sans Peur’（后半句的意思是‘毫无恐惧地说话’） 在这里看到更多：<a href="https://www.jupiter-films.com/film-free-speech-parler-sans-peur-95.php" target="_blank" rel="noopener">https://www.jupiter-films.com/film-free-speech-parler-sans-peur-95.php</a> (from @DonEvansWm)</p>
+<p>『最后的棒棒』一口气看完这部纪录片，真是精彩！我喜欢的看点到不是弱势群体，底层惨状，中国梦反差萌…之类表象。而是这片在以真实为基准之上展现的人性与戏剧性，即便是位高权重者，富有者，一样逃不开片中那些真实而连续的人生里的因果循环。<a href="https://www.bilibili.com/video/av22517607?from=search&amp;seid=14283108750748647806" target="_blank" rel="noopener">https://www.bilibili.com/video/av22517607?from=search&amp;seid=14283108750748647806</a> (from @tanxinbuzu)</p>
+<p>160分钟版芙蓉镇Hibiscus Town.1986.DVD.X264.AAC.HALFCD <a href="https://youtu.be/5VL5WPZGVH0" target="_blank" rel="noopener">https://youtu.be/5VL5WPZGVH0 </a> (from @appiredicry)</p>
+<p>上周末看完《民主：沉醉在数据中》，这部关于今年5月份实施的GDPR条例出台始末的纪录片，权衡各种政治、司法、经济利益、公民权益的过程挺值得一看的，没记错的话应该也是斯诺登第二次真人出镜。摄制组也是史无前例的获得欧盟的许可，全程纪录下该条例的诞生。 B站德语中字：<a href="https://www.bilibili.com/video/av6675249/" target="_blank" rel="noopener">https://www.bilibili.com/video/av6675249/ …</a> (from @LaoTieNoProblem)</p>
+<p>英國另一份重要的知識份子雜誌「倫敦書評」這一期很特別：只有一篇文章，是關於去年Grenfell Tower 大火的反思。網站上有全文，還有一支將近一小時的紀錄片。我可能沒有心力看完，但是對於這個企圖很有興趣 Andrew O’Hagan in the <a href="https://twitter.com/hashtag/LRB?src=hash" target="_blank" rel="noopener"><strong>LRB</strong></a>: <a href="https://www.lrb.co.uk/v40/n11/andrew-ohagan/the-tower" target="_blank" rel="noopener">https://www.lrb.co.uk/v40/n11/andrew-ohagan/the-tower</a> via <a href="https://twitter.com/LRB" target="_blank" rel="noopener"><strong>@LRB</strong></a> (from @soundfury)</p>
+<p>“The push for STEM-based education in this country is fierce. It’s in all of our faces. And this is a colossal mistake.” <a href="https://twitter.com/ericberridge" target="_blank" rel="noopener">@<strong>ericberridge</strong></a> <a href="https://www.ted.com/talks/eric_berridge_why_tech_needs_the_humanities" target="_blank" rel="noopener">https://www.ted.com/talks/eric_berridge_why_tech_needs_the_humanities</a> (from @TEDTalks)</p>
+<p>“We cannot have a society in which, if two people wish to communicate, the only way that can happen is if it’s financed by a third person who wishes to manipulate them.”<a href="https://www.ted.com/talks/jaron_lanier_how_we_need_to_remake_the_internet" target="_blank" rel="noopener">https://www.ted.com/talks/jaron_lanier_how_we_need_to_remake_the_internet</a></p>
+<p>“As long as my phone is turned on, my location can be tracked.” <a href="https://t.co/uLy0VEA8xs" title="http://t.ted.com/OZ0DOAn" target="_blank" rel="noopener">http://t.ted.com/OZ0DOAn </a></p>
+<p>7 years ago, I talked with <a href="https://twitter.com/jimmy_wales" target="_blank" rel="noopener">@<strong>jimmy_wales</strong></a> about collaboration <a href="https://www.youtube.com/watch?v=PlFUf-KwYjM&amp;t=5s" target="_blank" rel="noopener">https://www.youtube.com/watch?v=PlFUf-KwYjM&amp;t=5s</a></p>
+<h2 id="数字馆藏类"><a href="#数字馆藏类" class="headerlink" title="数字馆藏类"></a>数字馆藏类</h2><p>康奈尔大学的 Macaulay Library，号称全世界最大最久（自1929）的动物叫声资料库（也包括视频资料），收藏了近67%世界鸟类的声音，该大学的鸟类实验室将这批音视频资料进行了数字化并发布：<a href="http://t.co/SAdOzSMh9p" title="http://macaulaylibrary.org/" target="_blank" rel="noopener">http://macaulaylibrary.org/ </a> 。包括9000物种的15万音频。</p>
+<p>中研院歷史語言研究所製作的「近代史數位資料庫」的網站風格太贊了 <a href="http://t.co/Ri6Qym3MqM" title="http://mhdb.mh.sinica.edu.tw/index.php" target="_blank" rel="noopener">http://mhdb.mh.sinica.edu.tw/index.php </a></p>
+<p>斯坦福大学图书馆发布了 EarthWorks ——新的GIS数据发现系统，支持多种途径检索和浏览来源于斯坦福大学图书馆及其他机构的GIS数据。 入口：<a href="https://earthworks.stanford.edu/" target="_blank" rel="noopener">https://earthworks.stanford.edu/</a></p>
+<p>因见人数次提及，很想读一下郭沫若的《读〈随园诗话〉札记》，搜到一册非常清晰的PDF版《郭沫若全集文学编》第十六卷，其中包含了该札记及文艺论集续集：<a href="http://t.co/fGZDr92KAu" title="http://memory.scu.edu.cn/UploadFiles/pdf/%E9%83%AD%E6%B2%AB%E8%8B%A5%E5%85%A8%E9%9B%86%E6%96%87%E5%AD%A6%E7%BC%9616.pdf" target="_blank" rel="noopener">http://memory.scu.edu.cn/UploadFiles/pdf/%E9%83%AD%E6%B2%AB%E8%8B%A5%E5%85%A8%E9%9B%86%E6%96%87%E5%AD%A6%E7%BC%9616.pdf …</a></p>
+<p>“中英文图书数字化国际合作计划（CADAL）”现有成果：7.8万册电子书，中文古籍，600dpi分辨率。 <a href="https://archive.org/search.php?query=%28sponsor%3A%22China-America%20Digital%20Academic%20Library%20%28CADAL%29%22%29%20AND%20-mediatype%3Acollection&amp;sort=-avg_rating%3B-num_reviews" target="_blank" rel="noopener">https://archive.org/search.php?query=%28sponsor%3A%22China-America%20Digital%20Academic%20Library%20%28CADAL%29%22%29%20AND%20-mediatype%3Acollection&amp;sort=-avg_rating%3B-num_reviews</a></p>
+<p>10000+ 报纸分布世界地图： <a href="http://t.co/uq7gJgJOc3" title="http://newspapermap.com" target="_blank" rel="noopener">http://newspapermap.com </a> 。以颜色区分语种，嗯，汉语被归在了“Other”里。via <a href="https://twitter.com/newspapermap" target="_blank" rel="noopener">@<strong>newspapermap</strong></a></p>
+<p>一个关于歌川广重木刻浮世绘的网站：<a href="http://t.co/zWjbbhHWjK" title="http://www.hiroshige.org.uk/index.html" target="_blank" rel="noopener">http://www.hiroshige.org.uk/index.html </a> 。作品收集得很全，描述清晰。妙的是，创建者是一个既不懂日语也非艺术专业的人，对于何以会做这样一个网站又缄口不言，不禁让人揣想背后的故事。</p>
+<p><a href="http://t.co/wc5kYkg0IR" title="http://ecoexplorer.arcgis.com/eco/" target="_blank" rel="noopener">http://ecoexplorer.arcgis.com/eco/ </a> USGS（美国地址勘探局) 和 Esri（环境系统研究所） 联合制作发布的最详细的高精度（250米）全球生态在线地图工具。</p>
+<p>Expedia Viewfinder 数据库最近发布了一个beta版图片库（ Expedia Viewfinder Image Library， <a href="http://t.co/KrwfzAn2KN" title="http://www.expedia.com/pictures/" target="_blank" rel="noopener">http://www.expedia.com/pictures/ </a> ），包含4万高清旅游照片，可供创作者们免费使用。嗯，这个横移页面够鲜亮。</p>
+<p>为纪念莎士比亚去世400周年，最大最权威的莎士比亚资料在线展览 “Shakespeare Documented” 于1月20日发布，包含与莎士比亚生平与作品相关的图片，抄本，文档，在他生前及去世后不久提及他的各种参考文献等。 <a href="http://www.shakespearedocumented.org/" target="_blank" rel="noopener">http://www.shakespearedocumented.org/ </a></p>
+<p>由波音公司赞助，《美国航空周刊与航天技术》（Aviation Week &amp; Space Technology）杂志将其100年来的4500期约50万页内容数字化并免费开放（1916-2016）：<a href="http://archive.aviationweek.com/" target="_blank" rel="noopener">http://archive.aviationweek.com</a></p>
+<p>WDL 世界数字图书馆 <a href="http://www.wdl.org/" target="_blank" rel="noopener">http://www.wdl.org/</a> 真是太酷了！比如这个世界地图的分类下 <a href="http://www.wdl.org/zh/search/?additional_subjects=World%20maps" target="_blank" rel="noopener">http://www.wdl.org/zh/search/?additional_subjects=World%20maps</a> 把各个文明对世界地图如何接纳的历史都呈现出来，而且这些珍贵的原始资料的数字版本都可以自由下载！必须赞！</p>
+<p>19世纪被称为书籍插图的黄金时代。“Old Book Illustrations”这个网站扫描了19世纪至20世纪初公有域老书刊的优秀插图，供免费下载：<a href="http://www.oldbookillustrations.com/" target="_blank" rel="noopener">http://www.oldbookillustrations.com/</a> 。图片高清，按主题、画家分类，可检索题名，质量超赞。</p>
+<p>奥斯丁家族收藏的乐谱，有印刷本，有手稿，共18册，目前被南安普顿大学图书馆数字化了，扫描效果很好：<a href="https://archive.org/details/austenfamilymusicbooks" target="_blank" rel="noopener">https://archive.org/details/austenfamilymusicbooks</a> 。cc 音乐爱好者。</p>
+<p>论书籍数字化之精美和不惜成本，莫过于梵蒂冈数字图书馆，现在该网站已经有5300珍稀数字化手稿发布了：<a href="http://digi.vatlib.it/" target="_blank" rel="noopener">http://digi.vatlib.it/ </a></p>
+<p>哈佛美术馆制作的包豪斯艺术作品时间线：<a href="https://t.co/V6jRTmKDGl" title="http://www.harvardartmuseums.org/tour/the-bauhaus/slide/6338" target="_blank" rel="noopener">http://www.harvardartmuseums.org/tour/the-bauhaus/slide/6338 …</a> ；该馆已将约3.2万件包豪斯风格艺术品制作为在线馆藏，可从各种角度检索浏览：<a href="https://t.co/DL1iQVX87T" title="http://www.harvardartmuseums.org/collections/special-collections/the-bauhaus" target="_blank" rel="noopener">http://www.harvardartmuseums.org/collections/special-collections/the-bauhaus …</a></p>
+<p>大英图书馆的“泥金装饰手抄本（Illuminated manuscript）目录”，收录该馆藏中世纪及文艺复兴时期手抄本中的装饰页及其说明，若是搜索及呈现功能更好用些就好了。<a href="https://t.co/B3SWmafidd" title="http://www.bl.uk/catalogues/illuminatedmanuscripts/welcome.htm" target="_blank" rel="noopener">http://www.bl.uk/catalogues/illuminatedmanuscripts/welcome.htm …</a></p>
+<p>Internet Sacred Text Archive Home，收集关于宗教、神话、传奇、民俗、神秘学等主题的在线电子书库，每种包括英文版，并尽可能提供原文。一个“古老”的网站，1999年就上线了。<a href="https://t.co/lvByzdRT2o" title="http://www.sacred-texts.com/index.htm" target="_blank" rel="noopener">http://www.sacred-texts.com/index.htm </a></p>
+<p>免費下載佛洛伊德著作的電子書與有聲書 <a href="https://t.co/KpfE8Tc6NU" title="http://bit.ly/23AgkW4" target="_blank" rel="noopener">http://bit.ly/23AgkW4 </a></p>
+<p>来自彩色玻璃艺术家 Henry Belcher 和他的公司1886年出版的马赛克玻璃目录，真的很美。 <a href="https://t.co/5ByjQPL3mE" title="http://publicdomainreview.org/collections/catalogue-from-belcher-mosaic-glass-co-1886/" target="_blank" rel="noopener">http://publicdomainreview.org/collections/catalogue-from-belcher-mosaic-glass-co-1886/ …</a></p>
+<p>大都会艺术博物馆出版的457种艺术书籍于 MetPublications 门户网站免费开放了：<a href="https://t.co/Uo0kwjXvZ3" title="http://www.metmuseum.org/art/metpublications/titles-with-full-text-online?searchtype=F" target="_blank" rel="noopener">http://www.metmuseum.org/art/metpublications/titles-with-full-text-online?searchtype=F …</a> ，可以下载，也可以在 Google Books 上浏览全文。</p>
+<p>MIT 媒体实验室与 Deloitte 及 Datawheel 联合开发的数据挖掘与可视化工具：Data USA（<a href="https://t.co/uDHVwXg24c" title="http://datausa.io/" target="_blank" rel="noopener">http://datausa.io/ </a> ）上线，可从各个角度展示与分析美国政府开放数据。</p>
+<p>Rgoers 的世界玫瑰月季类百科全书（ <a href="https://t.co/CdDlnZIlNW" title="http://www.rogersroses.com/" target="_blank" rel="noopener">http://www.rogersroses.com/ </a> ），收录5000种玫瑰，提供6000幅图片帮助辨别种类，网站内容由玫瑰专家 Roger Phillips 和 Dr. Martyn Rix 小心维护编辑。</p>
+<p>美国国会图书馆将其数字馆藏中无任何版权限制的高清内容做了个专辑——Free to Use and Reuse Sets：<a href="https://www.loc.gov/free-to-use/&quot;" target="_blank" rel="noopener">https://www.loc.gov/free-to-use/ </a> ，分若干主题，包括海报、历史照片、资料图片、童书绘本、插画、浮世绘等等。我觉得每个数字馆藏大户都应该把无版权限制内容单列一下。(from @yun_chuang)</p>
+<p>芝加哥艺术博物馆将其4.4万+艺术作品的高清资源发布到新版官网上，以CC-0协议开放获取，可任意下载。比较赞的是，每一幅作品都附有详细介绍、作者小传、来源、相关音视频资料、参考文献等。<a href="https://www.artic.edu/collection" target="_blank" rel="noopener">https://www.artic.edu/collection</a> (from @yun_chuang)</p>
+<p>科幻百科全书Encyclopedia of Science Fiction：<a href="http://www.sf-encyclopedia.com/" target="_blank" rel="noopener">http://www.sf-encyclopedia.com/ </a> ，免费开放，包含17,500余词条。1979年出版的第一版科幻百科曾获1980年非小说类雨果奖。1993年出第二版，1994年又获雨果奖。2011年发布线上版本。现在的是第三版。(from @yun_chuang)</p>
+<p>Independent voices，开放获取资源，1951-2016独立/另类/激进出版物数字化集合，包括报纸/杂志/期刊，反战、女权、LGBT、黑人运动等，整合自美国、加拿大、英国多家机构，目前已收集 15,401期。<a href="https://voices.revealdigital.com/cgi-bin/independentvoices?a=p&amp;p=home&amp;e=-------en-20--1--txt-txIN---------------1" target="_blank" rel="noopener">https://voices.revealdigital.com/cgi-bin/independentvoices?a=p&amp;p=home&amp;e=——-en-20–1–txt-txIN—————1 …</a> (from @yun_chuang)</p>
+<p>普林斯顿大学图书馆数字化项目：30幅中国辛亥革命时期稀见木刻版画，高清。<a href="http://pudl.princeton.edu/collections/pudl0030" target="_blank" rel="noopener">http://pudl.princeton.edu/collections/pudl0030</a> (from @yun_chuang)</p>
+<p>Chine Ancienne，一个关于中国历史习俗宗教圣贤艺术文学等的法文数字图书馆。公有域，免费下载（pdf/doc）。看起来像是个人所建，主人引了句名言：“当你沉浸在中国人的世界，你不能走了！”（Quand vous serez plongé dans l’univers chinois, vous n’en sortirez plus !）<a href="https://www.chineancienne.fr/" target="_blank" rel="noopener">https://www.chineancienne.fr/</a></p>
+<p>芝加哥大学出版社2018新版美国史教科书：Building the American Republic 全文免费阅读下载 <a href="https://t.co/KHGBMFjitD" title="http://press.uchicago.edu/sites/buildingtheamericanrepublic/index.html" target="_blank" rel="noopener">http://press.uchicago.edu/sites/buildingtheamericanrepublic/index.html …</a> (from @ideobook)</p>
+<p>普林斯頓大學葛思德東亞圖書館还有一个皮影形象数据库（Chinese Shadow Figures Catalog）：<a href="https://t.co/5krRG06Oe7" title="https://library.princeton.edu/eastasian/shadowfigures/index.php?pageNum_Shadow=0&amp;totalRows_Shadow=2264&amp;search=" target="_blank" rel="noopener">https://library.princeton.edu/eastasian/shadowfigures/index.php?pageNum_Shadow=0&amp;totalRows_Shadow=2264&amp;search= …</a></p>
+<p>首都博物馆古籍插图图像数据库 <a href="https://t.co/6IKEB0do2T" title="http://query.clcn.net.cn/GJAndST/gjct1.htm" target="_blank" rel="noopener">http://query.clcn.net.cn/GJAndST/gjct1.htm …</a>，包含古籍插图数据一万条。用到的3次中有1次帮上了忙。这些插图从首图馆藏古籍文献中拣选制作，每条包括插图全文影像和内容标引。可惜图片精度不高，内容揭示也比较粗糙，范围仅限一馆之藏，未免狭窄些。真的应该有一个更大更精更博的插图库啊。</p>
+<p>这个很好玩：国际日本文化研究中心的妖怪画像数据库 <a href="https://t.co/1qAsvzJWTG" title="http://www.nichibun.ac.jp/YoukaiGazou/index.html" target="_blank" rel="noopener">http://www.nichibun.ac.jp/YoukaiGazou/index.html …</a> ，可按名字和特征检索。</p>
+<p>推荐一个偶遇的网站：漢語多功能字庫：古文字繫形、形義通解、英漢索引、粵語審音配詞。 <a href="https://t.co/mIMzyGyq1w" title="http://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/" target="_blank" rel="noopener">http://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/ </a> 香港中文大學人文電算研究中心建设，共收錄逾13800字，其中1060字有甲骨文，2059字有金文，1087字有簡帛文字，960字有其他古文字，7271字小篆等。页面布局利用率很高。</p>
+<p>《中国历史地图集》全八册在线公开 <a href="https://t.co/uu2skunxvn" title="http://www.ccamc.co/chinese_historical_map/index.php" target="_blank" rel="noopener">http://www.ccamc.co/chinese_historical_map/index.php …</a></p>
+<p>生态学鼻祖 Ernst Haeckel （恩斯特·海克尔）1904年初版 Kunstformen der Natur (Artforms of nature，自然的艺术形态) 中的100幅精美插画，高清图片在维基共享资源中（<a href="https://t.co/McWQDtySQ0" title="https://commons.wikimedia.org/wiki/Kunstformen_der_Natur" target="_blank" rel="noopener">https://commons.wikimedia.org/wiki/Kunstformen_der_Natur …</a> ），有人做成了顺滑缩放版：<a href="https://t.co/iuICpghrHz" title="http://algorithmic-worlds.net/Haeckel/haeckel.php" target="_blank" rel="noopener">http://algorithmic-worlds.net/Haeckel/haeckel.php …</a></p>
+<p>大英图书馆新上线子网站，发布了数字化的1300珍贵希伯来手抄本，支持希伯来文与英文双语检索。好华丽。British Library publishes treasure trove of Hebrew manuscripts <a href="https://t.co/kYCp4ZjpYJ" title="https://www.timesofisrael.com/british-library-publishes-treasure-trove-of-hebrew-manuscripts/?utm_source=dlvr.it&amp;utm_medium=twitter" target="_blank" rel="noopener">https://www.timesofisrael.com/british-library-publishes-treasure-trove-of-hebrew-manuscripts/?utm_source=dlvr.it&amp;utm_medium=twitter …</a></p>
+<p>费城伯恩斯美术馆最近数字化2000+印象派、后印象派及早期现代杰作（约为其馆藏一半），并免费开放：<a href="https://t.co/EOkLk1hGwa" title="https://collection.barnesfoundation.org/" target="_blank" rel="noopener">https://collection.barnesfoundation.org/ </a> ，其中1429幅可下载高分辨率图片。</p>
+<p>著名学术出版社 De Gruyter 最近发布了一个新网站 Science Discoveries ，用来展示科研方面的最新进展，主要聚焦于医学，健康，环境，技术，生物等领域。<a href="https://sciencediscoveries.degruyter.com/" target="_blank" rel="noopener">https://sciencediscoveries.degruyter.com/</a></p>
+<p>汉籍电子书库(漢リポ Kanseki Repository) ：<a href="https://t.co/vd6ZTuZAxo" title="https://www.kanripo.org/" target="_blank" rel="noopener">https://www.kanripo.org/ </a> 。日本人做的汉籍库，分经史子集道佛六类。经史子集以文渊阁四库全书为本，文本与影印页面对照，可全文搜索。开发托管于GitHub，已上传古籍9040种。</p>
+<p>史密森尼艺术博物馆将其20万件藏品数字化，令3000年设计史可在线浏览：<a href="https://t.co/7AjDEsS02L" title="https://collection.cooperhewitt.org/" target="_blank" rel="noopener">https://collection.cooperhewitt.org/ </a> 。 <a href="https://t.co/4b6MvhXCBC" title="http://www.openculture.com/2017/09/the-smithsonian-design-museum-digitizes-200000-objects.html" target="_blank" rel="noopener">http://www.openculture.com/2017/09/the-smithsonian-design-museum-digitizes-200000-objects.html …</a> 来自 <a href="https://twitter.com/openculture" target="_blank" rel="noopener"><del>@</del><strong>openculture</strong></a></p>
+<p>Google Arts &amp; Culture 新创建的项目“We Wear Culture”，集成了40个国家的时尚、纺织、服装艺术数字资源，跨越3000年历史，包括一些华丽的全景展示，看起来很有趣。<a href="https://artsandculture.google.com/project/fashion" target="_blank" rel="noopener">https://artsandculture.google.com/project/fashion</a></p>
+<p>国图网络注册用户可远程访问的电子资源越来越多，包括古籍数字善本、民国图书、东京大学东洋文化研究所汉籍影像、宋人文集、国际善本联合目录及大量外文数据库资源等。所以整理了关于国图网络用户注册、权限、资源等系列问题，如果有人需要：<a href="https://t.co/oWHS8gvFVp" title="https://workflowy.com/s/2Xwnb9s7Ve" target="_blank" rel="noopener">https://workflowy.com/s/2Xwnb9s7Ve</a></p>
+<p>台湾华文电子书库Taiwan eBook启用上线，电子书1万3,778册，包括1911-1949年图书1万2,178册、政府出版品595册、百人千书1,005册，免费开放读者线上阅览利用（无需翻墙，但首次打开速度较慢 <a href="https://t.co/ZdNipDAr4C" title="http://taiwanebook.ncl.edu.tw/zh-tw" target="_blank" rel="noopener">http://taiwanebook.ncl.edu.tw/zh-tw</a></p>
+<h2 id="技术-工具类"><a href="#技术-工具类" class="headerlink" title="技术/工具类"></a>技术/工具类</h2><p>这个名为Everything的本地全盘搜索工具好用，有绿色便携版，中文语言包，推荐。 <a href="https://t.co/dU0sVmNxUC" title="http://www.voidtools.com/" target="_blank" rel="noopener">http://www.voidtools.com/ </a></p>
+<p>EpubPress 實測後完全可用。將多個瀏覽器分頁的內容整合成一本電子書；除了下載檔案外，還可以勾選格式與電郵，直接寄送給 Kindle 與多看，一分鐘就收到而且格式呈現也不錯。 <a href="https://t.co/3AENIrBfv1" title="https://bookfere.com/post/565.html" target="_blank" rel="noopener">https://bookfere.com/post/565.html </a></p>
+<p>Debian/Ubuntu 系统下有个名为 gdebi 的软件包，可以自动解决安装的deb软件包时的依赖问题。<a href="https://packages.debian.org/search?searchon=names&amp;keywords=gdebi" target="_blank" rel="noopener">https://packages.debian.org/search?searchon=names&amp;keywords=gdebi</a> (from @chenshaoju)</p>
+<p>自学式手册《数字安全实用手册》的网站<a href="http://practicaldigitalprotection.com" target="_blank" rel="noopener">http://practicaldigitalprotection.com </a></p>
+<p>保护 SSH 端口的多种方法：<a href="http://www.hackingarticles.in/multiple-ways-to-secure-ssh-port/" target="_blank" rel="noopener">http://www.hackingarticles.in/multiple-ways-to-secure-ssh-port/</a> (from @APTp0)</p>
+<p>让 YouTube 实现双语字幕的 Chrome 扩展。<a href="https://github.com/muzuiget/dualsub-supports" target="_blank" rel="noopener">https://github.com/muzuiget/dualsub-supports</a> (from @muzuiget)</p>
+<p>「理解数字世界中的纸张|PDF 科普」：<a href="https://sspai.com/post/47092" target="_blank" rel="noopener">https://sspai.com/post/47092</a> (from @AlanDecode)</p>
+<p><a href="https://twitter.com/hashtag/Arctime?src=hash" target="_blank" rel="noopener"><strong>Arctime</strong></a> 是一个全新理念的可视化字幕创作软件，可以运行在Mac、Windows、Linux上。精准的音频波形图，可以快速创建和编辑时间轴，可以高效的进行文本编辑、翻译。支持SRT、ASS外挂字幕格式，并可以通过交换工程文件或与伙伴协同工作。字幕编辑完成后，需单击“视频转码”按钮，即可轻松完成字幕压制工作。</p>
+<p>发现一个很有用的工具网站，把可执行文件传上去，立刻用65种反病毒软件扫描一遍，更棒的是在Behavior页里有此程序在两种沙盒里的行为表现，简直通透。 同时还可以扫描URL。 <a href="https://twitter.com/hashtag/%E6%8E%A8%E8%8D%90?src=hash" target="_blank" rel="noopener"><strong>推荐</strong></a> 网站：<a href="https://www.virustotal.com" target="_blank" rel="noopener">https://www.virustotal.com </a> (from ZeaIYi)</p>
+<p>Anbox 是一个 Linux 系统运行安卓应用的容器，理论上把安卓应用安装在任何 Linux 系统，但是目前只支持 Ubuntu。<a href="https://anbox.io/" target="_blank" rel="noopener">https://anbox.io/ </a> (from @ruanyf)</p>
+<p>科学上网指南——Wireguard：<a href="https://eddyemma.com/blog/2018/08/26/科学上网指南-wireguard/" target="_blank" rel="noopener">https://eddyemma.com/blog/2018/08/26/科学上网指南-wireguard/</a>  (from @zhang_cong) <a href="https://doub.io" target="_blank" rel="noopener">https://doub.io</a></p>
+<p>前两天开源的《计算机网络：系统方法》，我做成电子书了，后面网址下载。<a href="https://github.com/ruanyf/book-computer-networks" target="_blank" rel="noopener">https://github.com/ruanyf/book-computer-networks</a> (from @ruanyf)</p>
+<p>Docker 是个划时代的开源项目，它彻底释放了计算虚拟化的威力，极大提高了应用的维护效率，降低了云计算应用开发的成本！使用 Docker，可以让应用的部署、测试和分发都变得前所未有的高效和轻松！<strong>Docker</strong>](<a href="https://twitter.com/hashtag/Docker?src=hash" target="_blank" rel="noopener">https://twitter.com/hashtag/Docker?src=hash</a>) 入门教程在这里。<a href="https://github.com/yeasy/docker_practice/blob/master/SUMMARY.md" target="_blank" rel="noopener">https://github.com/yeasy/docker_practice/blob/master/SUMMARY.md</a> (from @huangjinbo)</p>
+<p>2018年信息安全从业者书单推荐，重得阅读一下。<a href="https://github.com/riusksk/secbook" target="_blank" rel="noopener">https://github.com/riusksk/secbook</a> (from @huangjinbo)</p>
+<p>做了一个颜色预览以及配色生成工具 Colorless，可以实时预览 iOS/Android/Web 的配色效果。<a href="https://colorless.app/" target="_blank" rel="noopener">https://colorless.app/ </a> 我以前很长时间内都不知道如何使用颜色，看了很多关于色彩的书和文章后，还是决定用算法来计算颜色，而不是用我的艺术思维去创作。然后今天把我积攒的方法论做成了一个工具。(from @waylybaye)</p>
+<p>Data Miner 真的是爬網頁資料的神器。不需要寫程式，略摸一下 jQuery Selector 的規則多試幾次就好；選擇好資料欄位、自動翻頁繼續抓、甚至用簡單 JS 清理分割一下資料，都在 Chrome 裡完成，萬用。<a href="https://data-miner.io/" target="_blank" rel="noopener">https://data-miner.io/</a> (from @wastemobile)</p>
+<p>微软的团队协作工具 Teams 推出免费版了，可以聊天、视频、上传文件、内部集成了 Office。<a href="https://products.office.com/en-us/microsoft-teams/group-chat-software" target="_blank" rel="noopener">https://products.office.com/en-us/microsoft-teams/group-chat-software</a> (from @ruanyf)</p>
+<p>Editoria 是 Coko 替加利福尼亞大學出版社開發的線上出版系統，由好幾個同樣是他們開發的開源組件特調而來，功能與流程都非常紮實，編輯與作者協作、紀錄變更、編注都有；輸出 EPUB 與 IDML 都在開發計畫線上。 [<a href="https://editoria.pub/]https://editoria.pub/" target="_blank" rel="noopener">https://editoria.pub/]https://editoria.pub/</a>) GitLab <a href="https://gitlab.coko.foundation/editoria/editoria" target="_blank" rel="noopener">https://gitlab.coko.foundation/editoria/editoria</a> (from @wastemobile)</p>
+<p>安全手册：这里是你需要的几乎所有安全上网工具；以及为什么建议不要使用以美国为基地的网络服务; 为什么Win10 是隐私噩梦？ <a href="https://twitter.com/hashtag/privacy?src=hash" target="_blank" rel="noopener"><strong>privacy</strong></a>  <a href="https://steemit.com/life/@iyouport/7nfymr" target="_blank" rel="noopener">https://steemit.com/life/@iyouport/7nfymr</a></p>
+<p>《Linux 就该这么学》PDF 版本官方下载地址：<a href="https://www.linuxprobe.com/book" target="_blank" rel="noopener">https://www.linuxprobe.com/book </a>（注意需要关注微信公众号）。 (from @huangjinbo)</p>
+<p>自动生成背景图片的工具网站，现在提供五种风格，每种都可以定制，看上去赏心悦目。<a href="https://coolbackgrounds.io" target="_blank" rel="noopener">https://coolbackgrounds.io</a> (from @ruanyf)</p>
+<p>Android 手機畫面投影 Windows 10 免接線、免 App、免網路 <a href="https://www.playpcesor.com/2018/05/android-windows-10-miracast.html" target="_blank" rel="noopener">https://www.playpcesor.com/2018/05/android-windows-10-miracast.html</a> (from @esorhjy)</p>
+<p>对于Windows用户，如果需要彻底清除U盘或硬盘，且不想使用第三方软件的，可使用 format X: /p:Y 命令，其中 X 为需要格式化的盘符， Y 为清零的复写次数，建议不低于三次。如果要更加安全可靠的清除，可使用开源免费的Eraser软件： <a href="https://eraser.heidi.ie" target="_blank" rel="noopener">https://eraser.heidi.ie </a> (from @chenshaoju)</p>
+<p>如何恢复被删除的微信聊天记录 <a href="https://www.solidot.org/story?sid=56338" target="_blank" rel="noopener">https://www.solidot.org/story?sid=56338 </a> //光卸载微信是没用的，真正要彻底清理的话（Android），要么Root手机用dd命令擦除userdata分区，要么卸载微信，删除 /sdcard/tencent 目录后用第三方App复写存储空闲区域： <a href="https://play.google.com/store/apps/details?id=xyz.rodit.fshred" target="_blank" rel="noopener">https://play.google.com/store/apps/details?id=xyz.rodit.fshred</a> (from @chenshaoju)</p>
+<p><a href="https://www.portablefreeware.com/all.php" target="_blank" rel="noopener">https://www.portablefreeware.com/all.php</a> Portable Freeware Collection 如果要找一些Windows的小软件的话，这个网站挺不错的。(from @cathayan)</p>
+<p>装了 iNaturalist（一个自然观察与物种记录网站）的物种识别 App（<a href="https://www.inaturalist.org/pages/seek_app" target="_blank" rel="noopener">https://www.inaturalist.org/pages/seek_app </a> ），通杀动物植物真菌界，且看其效果如何。——其实我这个脸盲症患者不是更需要人脸识别应用吗？ (from @yun_chuang)</p>
+<p>想学 Markdown？这篇文章帮你快速上手 <a href="http://sspai.com/post/43866" target="_blank" rel="noopener">http://sspai.com/post/43866 </a></p>
+<p>根据 VPN Leak 这篇文章的介绍，即便使用 VPN，在浏览器启用 WebRTC 的情况下，用户的真实 IP 仍然有可能被泄漏。要检测你的真实 IP 是否被泄漏，可访问：<a href="https://ip.voidsec.com" target="_blank" rel="noopener">https://ip.voidsec.com </a> (<a href="https://voidsec.com/vpn-leak/" target="_blank" rel="noopener">https://voidsec.com/vpn-leak/ </a>) (from @linuxtoy)</p>
+<p>凑巧发现了Cloud Torrent这款开源软件，试了一下，发现效果意外的不错，功能： BT下载 磁力链接下载 上传BT文件 离线下载 边下边播 面板操作 文件会离线下载存储到VPS上，然后你可以下载到电脑本地… 软件地址：<a href="https://t.co/mPCCon8x32" title="https://github.com/jpillora/cloud-torrent" target="_blank" rel="noopener">https://github.com/jpillora/cloud-torrent …</a> Doubi一键脚本： <a href="https://t.co/D8YveaKA93" title="https://doub.io/wlzy-12/" target="_blank" rel="noopener">https://doub.io/wlzy-12/ </a> 个人建议安装原版 (from @CrazyJal)</p>
+<p>两个很好的初学者教程:《四分钟学 CSS》 <a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank" rel="noopener">https://jgthms.com/web-design-in-4-minutes/ …</a> 《十四分钟学 JavaScript》 <a href="https://jgthms.com/javascript-in-14-minutes/" target="_blank" rel="noopener">https://jgthms.com/javascript-in-14-minutes/</a> (from @ruanyf)</p>
+<p>有興趣的可以試試 BookFusion 電子書管理服務（免費） <a href="https://t.co/B50X3YRwEQ" title="https://www.bookfusion.com" target="_blank" rel="noopener">https://www.bookfusion.com </a> 不管 ePub 或 mobi，拖進視窗就可上傳、集中管理；設定好 Send to Kindle 電郵之後就可自由傳送，它會自動轉換格式（這點很棒）。中文沒問題，Android 閱讀軟體比 iOS 的好，劃線註記功能也都有。</p>
+<p>CSS 垂直居中的最简单写法：容器元素设为 <code>flex</code> 布局，子元素只要写 <code>margin: auto</code> 即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;</span><br><span class="line">  &lt;h1&gt;A secret weapon..&lt;/h1&gt;</span><br><span class="line"> &lt;/header&gt;</span><br><span class="line"></span><br><span class="line">header &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  height: 100vh;</span><br><span class="line"> &#125;</span><br><span class="line"> h1 &#123;</span><br><span class="line">   margin: auto;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>LightPDF 線上轉檔Word、編輯 PDF，免費無檔案大小時長限制 <a href="http://www.playpcesor.com/2018/02/lightpdf-word-pdf.html" target="_blank" rel="noopener">http://www.playpcesor.com/2018/02/lightpdf-word-pdf.html</a></p>
+<p>一个可以让你下载20多个网站视频的网站，不需要什么插件与客户端，只要播放地址既可以给你真实下载地址，绝对值得收藏。什么YouTube.Facebook.汤不热上的视都不是事。<a href="https://savieo.com" target="_blank" rel="noopener">https://savieo.com</a></p>
+<p>The Greek Alphabet - Cheat sheet for reading formulas in Machine Learning, Economics, and Finance. 附：如何在 Ubuntu Linux 下用 ppmtopdf 将PDF转换为图片 <a href="http://t.cn/RRrZBzG" target="_blank" rel="noopener">http://t.cn/RRrZBzG</a></p>
+<p>那个可以获取「学术论文」的 SciHub 进化 3.0 版本，拥有了易用的图形界面 <a href="http://ift.tt/2mLe6aK" target="_blank" rel="noopener">http://ift.tt/2mLe6aK</a></p>
+<p>最近看的两篇和 iCloud 有关的文章：《科普：进一步了解 iCloud「照片」、「照片图库」和「照片流」》 <a href="https://sspai.com/post/31553" target="_blank" rel="noopener">https://sspai.com/post/31553 </a> 和《不想停用 iCloud？不妨迁移数据到其它 Apple ID》 <a href="https://sspai.com/post/42766" target="_blank" rel="noopener">https://sspai.com/post/42766</a> 可以说少数派真的汇集了中文圈最优秀的相关领域作者了，比 Apple 官方文档写得还详细。</p>
+<p>Self-hosted Server 新增 Web 应用：Lychee。Lychee 是一个好看又好用的照片管理工具，包括专辑归类、与朋友分享、选择是否公开/私有、支持 EXIF/IPTC 元数据、导入等不错的功能。(<a href="https://selfhostedserver.com/features" target="_blank" rel="noopener">https://selfhostedserver.com/features</a> / <a href="https://lychee.electerious.com" target="_blank" rel="noopener">https://lychee.electerious.com</a>)</p>
+<p>你遇见过网页由于要下载字体，导致内容一片空白吗？ CSS 现在有一个新属性 font-display，可以解决这个问题，从而可以放心地在网页加载字体了。 <a href="https://font-display.glitch.me/" target="_blank" rel="noopener">https://font-display.glitch.me/</a></p>
+<p>【可视化小百科+工具箱】Google News Lab与一家可视化制作公司Adioma合作，将市面上出现的所有可视化都进行了分类：图表、相关书籍和工具。读者们可以在这个小宇宙页面上，看到三大类代表的星球独立自转，简洁明了，奇趣又美观。<a href="https://buff.ly/2AlLzgI" target="_blank" rel="noopener">https://buff.ly/2AlLzgI</a></p>
+<p>【不会编程，也可轻松学地图可视化】CartoDB是一款开源网络应用程序和交互式地图制作工具，以提供“一键式制图”功能闻名。起初CartoDB和数据新闻相差千里，是两名西班牙研究生物多样性和自然保护的科学家为了更好展示研究成果而建立的。<a href="https://buff.ly/2CovJ6e" target="_blank" rel="noopener">https://buff.ly/2CovJ6e</a></p>
+<p>Git In Practice：面向中到高级用户的 Git 图书，原由 Manning 出版，现由作者开源到 GitHub 供免费阅读。(<a href="https://github.com/GitInPractice/GitInPractice" target="_blank" rel="noopener">https://github.com/GitInPractice/GitInPractice</a>)</p>
+<p>小知识 很多人不知道 text-decoration-color 和 text-decoration-style，可以设置下划线的颜色和样式。（来自<a href="https://twitter.com/AllThingsSmitty" target="_blank" rel="noopener"><del>@</del><strong>AllThingsSmitty</strong></a>）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a:link &#123;</span><br><span class="line">  text-decoration: green wavy underline;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果你还在使用 tinypng 压缩 PNG 图片，可以考虑改用 upng。它的压缩率更好，还可以调节图片清晰度，换取更小的体积。<a href="http://upng.photopea.com/" target="_blank" rel="noopener">http://upng.photopea.com/ </a></p>
+<p>【ProPublica数据学院】自Propublica数据学院开办两年以来，已有千余人报名参加，每年平均录取12人。无法参与实体课堂也没关系，学院录制了5门课的教学视频，分别是编程基础、网站运作、HTML、CSS基础和进阶。教学链接：<a href="https://buff.ly/2z33sDu" target="_blank" rel="noopener">https://buff.ly/2z33sDu</a></p>
+<h2 id="网课类"><a href="#网课类" class="headerlink" title="网课类"></a>网课类</h2><p>OpenCourseWare是MIT麻省理工学院在2002年发起的公开课项目，旨在向全世界的学生和教育工作者提供免费的在线课程和教材下载等，许多课程还附现场视频讲解，非常不错的项目，对于学习各类知识都有帮助。 网址链接 <a href="https://ocw.mit.edu/index.htm" target="_blank" rel="noopener">https://ocw.mit.edu/index.htm </a> (from @GavinLeely)</p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>一些开放的 Trello：<a href="https://trello.com/b/Ke3fB31A/skoryxs-art-queue" target="_blank" rel="noopener">https://trello.com/b/Ke3fB31A/skoryxs-art-queue</a> (from @ooof)</p>
+<p>推荐一本英文的数学教材《进入纯数学》，免费下载。 从简单的自然数讲起，包括代数、数论、集合、概率和微积分等章节。我觉得，至少对于了解数学的符号体系很有好处。<a href="https://infinitedescent.xyz/" target="_blank" rel="noopener">https://infinitedescent.xyz/ </a> (from ruanyf)</p>
+<p>有人收集了一份书单，推荐各个领域的经典教科书 <a href="https://www.lesswrong.com/posts/xg3hXCYQPJkwHyik2/the-best-textbooks-on-every-subject" target="_blank" rel="noopener">https://www.lesswrong.com/posts/xg3hXCYQPJkwHyik2/the-best-textbooks-on-every-subject …</a> （算法方面推荐了算法导论，我还是更推荐 Sedgwick 的那本）(from @zellux)</p>
+<p>后知后觉，才发现 Adobe 旗下的全球创意设计类作品聚合平台 Behance， 多种语言支持，多数作品遵循CC协议，允许非商业使用（当然要保留署名说明出处），找素材好去处：<a href="https://www.behance.net/" target="_blank" rel="noopener">https://www.behance.net/ </a> (from @yun_chuang)</p>
+<p><a href="https://twitter.com/hashtag/MeeToo?src=hash" target="_blank" rel="noopener"><strong>MeeToo</strong></a> in China 前段时间公益行业性暴力事件频发，鑑於较少有专业的机构和师资能开展性骚扰专题方面的培訓，性教育機構玛丽斯特普查阅资料并根据机构内部的制度作了一个培训方案，並面向社會提供免費下载：<a href="http://www.mariestopes.org.cn/xizai/download.php?class2=157" target="_blank" rel="noopener">http://www.mariestopes.org.cn/xizai/download.php?class2=157</a> (from @agaguk)</p>
+<p>最新一期的Foreign Affairs值得收藏。 以“互联网之战”（World War Web）为主题编录的系列文章讨论了中国成为互联网大国对世界的威胁和影响、印度网络事业的独特发展道路、欧洲对互联网个人数据和隐私的管控、美国社交媒体对民主选举的影响、大型科技公司的商业和社会责任等。<a href="https://www.foreignaffairs.com/articles/2018-08-14/world-war-web" target="_blank" rel="noopener">https://www.foreignaffairs.com/articles/2018-08-14/world-war-web</a> (from @kuriko_c)</p>
+<p>What do we know about the <a href="https://twitter.com/hashtag/autism?src=hash" target="_blank" rel="noopener"><strong>autism</strong></a>  <a href="https://twitter.com/hashtag/brain?src=hash" target="_blank" rel="noopener"><strong>brain</strong></a>? Brain tissue <a href="https://twitter.com/hashtag/research?src=hash" target="_blank" rel="noopener"><strong>research</strong></a> made these findings possible. To learn more about the latest findings on the autism brain, visit <a href="http://takesbrains.org/signup" target="_blank" rel="noopener">http://takesbrains.org/signup </a> to sign up for the Autism BrainNet newsletter. (from @AutismBrainNet)</p>
+<p>为了尽可能地打造一个信息透明、多元化且高水平的产品技术团队，我编写了、并会发给部门内每个新人一份《丁宇的共事指南》，也就是所谓的“Manager Readme”：<a href="https://drive.google.com/file/d/12e7WwZSm1RUiiO2C3JhLKEnFgW_IOSIE/view" target="_blank" rel="noopener">https://drive.google.com/file/d/12e7WwZSm1RUiiO2C3JhLKEnFgW_IOSIE/view</a> (from @felixding)</p>
+<p>偶遇一个个人创办的电子书分享网站：周读，每种书通过百度网盘分享，提供Kindle电子书及txt、pdf、epub格式，书籍种类较杂，有新有旧，排版质朴。可用来救急。<a href="http://www.ireadweek.com/index.php/Index/index.html" target="_blank" rel="noopener">http://www.ireadweek.com/index.php/Index/index.html</a> (from @yun_chuang)</p>
+<p>800亿像素城市摄影系列，目前已经发布的城市： 北京：<a href="https://www.sigoo.com/beijing-skyline-360-panorama-on-central-radio-tv-tower" target="_blank" rel="noopener">https://www.sigoo.com/beijing-skyline-360-panorama-on-central-radio-tv-tower …</a> 广州：<a href="https://www.sigoo.com/guangzhou-tower-80-gigapixels-panorama" target="_blank" rel="noopener">https://www.sigoo.com/guangzhou-tower-80-gigapixels-panorama …</a> 天津：<a href="https://www.sigoo.com/tianjing-360-panorama-on-tianjing-tv-tower" target="_blank" rel="noopener">https://www.sigoo.com/tianjing-360-panorama-on-tianjing-tv-tower …</a> 郑州：<a href="https://www.sigoo.com/zhengzhou-360-panorama-on-qianxi-plaza" target="_blank" rel="noopener">https://www.sigoo.com/zhengzhou-360-panorama-on-qianxi-plaza …</a> 哈尔滨：<a href="https://www.sigoo.com/harbin-360-panorama-in-the-winter" target="_blank" rel="noopener">https://www.sigoo.com/harbin-360-panorama-in-the-winter …</a> 石家庄：<a href="https://www.sigoo.com/shijiazhuang-360-panorama-on-tv-tower" target="_blank" rel="noopener">https://www.sigoo.com/shijiazhuang-360-panorama-on-tv-tower …</a> 贵阳：<a href="https://www.sigoo.com/guiyang-360-panorama-on-dongshan" target="_blank" rel="noopener">https://www.sigoo.com/guiyang-360-panorama-on-dongshan …</a> (from @chenymail)</p>
+<p>一些分辨率术语的含义 - 720p: 1280 x 720, 称为 HD - 1080p: 1920 x 1080, 称为 FULL HD - 1440p: 2560 x 1440, 称为 QHD 或 Quad HD，即4倍的HD - 2160p: 3840 x 2160, 称为 4K - 4320p: 7680 x 4320, 称为 8K <a href="https://medium.com/@yashwate07/explained-1-display-resolution-11a67a6096c" target="_blank" rel="noopener">https://medium.com/@yashwate07/explained-1-display-resolution-11a67a6096c</a> (from @ruanyf)</p>
+<p>香港中文大学的《二十一世纪》杂志，原来都已经可以网上免费阅读了。。幸福。。 每一期都有很多好看的文章，创刊三十年积累了很多优秀文章，中文世界里相当优秀的杂志了。<a href="http://www.cuhk.edu.hk/ics/21c/zh/issues/index.html" target="_blank" rel="noopener">http://www.cuhk.edu.hk/ics/21c/zh/issues/index.html</a> (from @wuyagege)</p>
+<p>转<a href="https://twitter.com/jz" target="_blank" rel="noopener">@<strong>JZ</strong></a>周峻纬 <a href="http://www.comh.ca/antidepressant-skills/adult/resources/index-asw.cfm" target="_blank" rel="noopener">http://www.comh.ca/antidepressant-skills/adult/resources/index-asw.cfm</a> 《抑郁自我护理手册》，为那些没有条件寻求心理干预的人准备。 BIlsker教授几十年行医经验和科研结果的总结，专门为非专业人士准备，避免了使用专业词汇和生僻词语。 点开后找到Chinese simplified就可以打开简体中文版。以上资源免费，已通过作者本人授权。(from @knifepoint)</p>
+<p>I wrote this in 2010 about attention &amp; other 21st century literacies; I’m usually around 10 yrs too early, so it’s about right for now:<a href="https://er.educause.edu/articles/2010/10/attention-and-other-21stcentury-social-media-literacies" target="_blank" rel="noopener">https://er.educause.edu/articles/2010/10/attention-and-other-21stcentury-social-media-literacies</a> (from @hrheingold)</p>
+<p>中文版《独裁者手册》之和谐手册：<a href="https://kesalin.github.io/blog/2015/03/26/miss-of-the-dictatos-handbook/" target="_blank" rel="noopener">https://kesalin.github.io/blog/2015/03/26/miss-of-the-dictatos-handbook</a></p>
+<p>網路大數據與個人隱私自決 from Medium <a href="http://bit.ly/2puqBch" target="_blank" rel="noopener">http://bit.ly/2puqBch </a> 但主要是想推這本報告《Network of Control：A Report on Corporate Surveillance, Digital Tracking, Big Data &amp; Privacy》，跟著文內連結可以下載免費英文全文 PDF。</p>
+<p>四个简单方法，从今天开始戒糖: <a href="https://cn.nytimes.com/health/20180320/4-easy-ways-to-cut-down-your-sugar-intake" target="_blank" rel="noopener">https://cn.nytimes.com/health/20180320/4-easy-ways-to-cut-down-your-sugar-intake</a></p>
+<p>新加坡居然登记了每一棵树，目前全国共有56万4266棵树。 而且，还可以下载 JSON 文件，里面是每棵树的坐标、年龄、生长速度等数据。（via <a href="https://twitter.com/cheeaun" target="_blank" rel="noopener">@<strong>cheeaun</strong></a>）<a href="https://www1.nparks.gov.sg/trees" target="_blank" rel="noopener">https://www1.nparks.gov.sg/trees</a></p>
+<p>Learn-Anything 這網站很有趣、野心很大，希望讓有心想自學任何知識的人，都能搜尋獲得「學習路徑」，那些有前後關聯或必要性，甚至不會出現在一般搜尋引擎的資源。 <a href="https://learn-anything.xyz" target="_blank" rel="noopener">https://learn-anything.xyz</a> (from @wastemobile)</p>
+<p>【如何均衡媒体饮食】每天平均12小时媒体摄入量：尽可能多的从书籍等摄取提升自己的养分；3小时阅读好的报纸陶冶性情；2小时看剧打游戏；1小时处理邮件等人际关系；半小时处理刷社交媒体；避免虚假内容 <a href="https://wanqu.co/p/6307" target="_blank" rel="noopener">https://wanqu.co/p/6307 </a></p>
+<p>推荐一本开源电子书《图说 Hadoop》，介绍最流行的大数据管理工具 Hadoop，面向新手，使用卡通图画介绍入门的基本概念。原文是英文，但非常浅显，很好懂。<a href="http://hadoopilluminated.com/" target="_blank" rel="noopener">http://hadoopilluminated.com/</a></p>
+<p>大连理工大学出版社下载中心，可以下载到他们出版的各种教材的相关课件、音视频等资料，不管有没有买过书：<a href="http://dutp.dlut.edu.cn/xgxz1/MP3ykjxzzx.htm" target="_blank" rel="noopener">http://dutp.dlut.edu.cn/xgxz1/MP3ykjxzzx.htm</a></p>
+<p>《默克诊疗手册》，在美加以外地区称为《默沙东诊疗手册》，是世界上使用最广泛的医学信息资源之一。 本手册致力于到 2020 年向各大洲高达 30 亿卫生保健专业人员和病人提供当前最佳的医学信息。<a href="https://www.msdmanuals.cn" target="_blank" rel="noopener">https://www.msdmanuals.cn </a></p>
+<p>一个超酷的网站！！！！！ <a href="http://stars.chromeexperiments.com/" target="_blank" rel="noopener">http://stars.chromeexperiments.com/</a> 刚进去看到loading the galaxy我心就开始怦怦跳了！！！ 真的要看啊超酷超酷！</p>
+<p>由于中国政府并未公布工人罢工和抗争的官方统计数字，中国劳工通讯的工人集体行动地图 <a href="https://twitter.com/bagongditu" target="_blank" rel="noopener">@<strong>bagongditu</strong></a> 是公众唯一能够查阅的数据库。自2011年起，地图以中英双语收录了近10000宗工人集体行动的详细资料 <a href="http://maps.clb.org.hk/strikes/zh-cn" target="_blank" rel="noopener">http://maps.clb.org.hk/strikes/zh-cn</a></p>
+<p>居然有人真的做出了博尔赫斯笔下的《通天塔图书馆》，可以搜索、也可以一页一页看。 <a href="https://libraryofbabel.info/" target="_blank" rel="noopener">https://libraryofbabel.info/</a></p>
+<p>Yale大学有个很有趣的地理经济学（GEcon）的数据库：<a href="http://gecon.yale.edu" target="_blank" rel="noopener">http://gecon.yale.edu</a> ，展示了一个国家每个地区经济水平分布图。可以看到，每一个国家的GDP基本都是集中在几个大城市（都市圈）。如果再和推特的话唠城市做一个对比，估计可以得到一些很有趣的结论~</p>
+<p>又发现一个杀时间网站：<a href="http://brainden.com/" target="_blank" rel="noopener">http://brainden.com/</a> ，包含各种有趣的英文谜语，逻辑题，智力游戏，脑筋急转弯等。</p>
+<p>上海图书馆新发布的家谱知识服务平台“华人家谱总目”（<a href="http://jp.library.sh.cn/" target="_blank" rel="noopener">http://jp.library.sh.cn/ </a>），提供基于人、地、时、事、堂号多维分面浏览检索家谱信息，并以可交互时间轴、地图展示某姓氏在某一地理空间分布情况。该家谱知识库的元数据也以关联数据形式开放，提供API接口。</p>
+<p>学术界海盗湾Sci-Hub，2011年哈萨克斯坦女大学生 Alexandra Elbakyan 所建，旨在去除所有学术障碍，免费提供4千7百万论文获取，去年被Elsevier起诉，网站关了开，开了关，一度移入暗网。现在的域名是：<a href="http://sci-hub.io/" target="_blank" rel="noopener">http://sci-hub.io/</a></p>
+<p>美国英语与英国英语的词汇差异 <a href="http://themindcircle.com/british-vs-american-english-differences/" target="_blank" rel="noopener">http://themindcircle.com/british-vs-american-english-differences/</a></p>
+<p>很赞的网站：Wireless Philosophy，简称 Wi-Phi ，一个开放的哲学网站，致力于以轻松有趣的动画形式阐释哲学问题及哲学思维方式。建于2013年，现在已经有105个哲学动画上线了。 <a href="http://www.wi-phi.com/" target="_blank" rel="noopener">http://www.wi-phi.com/</a></p>
+<p>GPlates Portal 首次发布了可交互的3D数字化世界海底地图：<a href="http://portal.gplates.org/#SEAFLOOR" target="_blank" rel="noopener">http://portal.gplates.org/#SEAFLOOR</a> 。赞。由悉尼大学的一个研究团队制作。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://rosescats.github.io/2018/11/22/twitter-likes-resources-wiki/" data-id="cju42qpoi0033kft53mbd5vpc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/资源/">资源</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-password-art-of-invisibility" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/18/password-art-of-invisibility/" class="article-date">
+  <time datetime="2018-11-18T00:00:00.000Z" itemprop="datePublished">2018-11-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/reading/">reading</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/18/password-art-of-invisibility/">密码安全｜《隐身的艺术》第一章摘要</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://i.loli.net/2018/11/18/5bf13d74df111.jpg" alt="THe Art of the Invisibility: the world&#39;s most famous hacker teaches you how to be safe in the age of big brother and big data"></p>
+<center>The Art of the Invisibility: the world’s most famous hacker teaches you how to be safe in the age of big brother and big data</center>
+
+<p>（从英文版出版社得知，这本书的中译本将由湛卢文化出版，期待！）</p>
+<p>延伸阅读文章：</p>
+<ul>
+<li><p><a href="https://blog.cloudflare.com/how-developers-got-password-security-so-wrong/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=website" target="_blank" rel="noopener">How Develpers got Password Security so Wrong</a> / <em>by Junade Ali</em></p>
+</li>
+<li><p><a href="https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/#cloudflareprivacyandkanonymity" target="_blank" rel="noopener">I’ve Just Launched “Pwned Passwords” V2 With Half a Billion Passwords for Download</a> / <em>by Troy Hunt</em></p>
+</li>
+</ul>
+<hr>
+<h1 id="密码"><a href="#密码" class="headerlink" title="密码"></a>密码</h1><p>我们使用密码存在的安全问题是：</p>
+<ul>
+<li><p>密码字符过短；</p>
+</li>
+<li><p>相同密码在不同账户重复使用；</p>
+</li>
+<li><p>密码中含有账户名/个人真实属性信息。</p>
+</li>
+</ul>
+<p>对应的策略有 5 点，具体的介绍在下面：</p>
+<ul>
+<li><p>增加密码字符长度。</p>
+</li>
+<li><p>使用密码管理器（例如 1Password、LastPass）给使用的每个网站设置随机、唯一的密码。</p>
+</li>
+<li><p>尽可能的启用双重身份验证（2FA），二次验证登录者身份。通常是通过手机短信、邮件、Authentication App 获取随机验证码。在网站 <a href="https://turnon2fa.com" target="_blank" rel="noopener">https://turnon2fa.com</a> 可以查看到如何启用 2FA.</p>
+</li>
+<li><p>给密码管理器设置一个安全、容易记住的管理密码，并打开 2FA, 保存好备份代码。</p>
+</li>
+<li><p>复杂规则密码的更好替代方法是不使用已经被破坏泄漏的密码。</p>
+</li>
+</ul>
+<p>EPPB（Elcomsoft Phone Password Breaker）的目的是使执法机构、政府机构获取 iCloud 账户的软件，并且可以公开销售。</p>
+<p>为了保护你的 iCloud 和其它在线账户，必须设置一个强密码。</p>
+<p>除了工作相关的密码之外，还有那些可以保护大部分个人账户的密码。选择一个难以猜测出来的密码，并不能避免 oclHashcat 这类黑客工具可能攻破你的密码，但是它可以使破译过程变慢，使得攻击者转向更容易的目标。</p>
+<p>我们可以合理猜想，在 2015 年 7 月的 Ashley Madison 黑客事件中，暴露出来的一些密码肯定正在被用于其它地方，包括银行账户、甚至工作电脑。在公布在网上的 110,000,00 个 Ashley Madison 密码中，最常见的是「123456」「12345」「password」「DEFAULT」「123456789」「qwerty」「12345678」「abc123」「1234567」。如果你看见你自己的密码有上述这些，你很可能容易受到数据破坏。</p>
+<h2 id="Pwned-安全检查"><a href="#Pwned-安全检查" class="headerlink" title="Pwned 安全检查"></a>Pwned 安全检查</h2><h3 id="邮箱账户"><a href="#邮箱账户" class="headerlink" title="邮箱账户"></a>邮箱账户</h3><p>可以在网站 <a href="https://www.haveibeenpwned.com" target="_blank" rel="noopener">https://www.haveibeenpwned.com</a> 检查你的邮箱账户信息是否出现过泄漏。</p>
+<p><img src="https://i.loli.net/2018/11/20/5bf41947679e3.png" alt="Selection_005"></p>
+<center>邮箱账户没有发生过泄漏</center>
+
+<p><img src="https://i.loli.net/2018/11/20/5bf4195a38dc9.png" alt="Selection_007"></p>
+<center>邮箱账户在 3 个网站发生过泄漏</center>
+
+<p><img src="https://i.loli.net/2018/11/20/5bf41a02b5fc7.png" alt="Selection_008"></p>
+<center>邮箱账户发生泄漏的详细说明</center>
+
+<h3 id="密码暴露"><a href="#密码暴露" class="headerlink" title="密码暴露"></a>密码暴露</h3><p>在 <a href="https://haveibeenpwned.com/Passwords" target="_blank" rel="noopener">https://haveibeenpwned.com/Passwords</a> 可以检查密码是否已经在数据泄漏中暴露，如果显示红色背景的以下信息，说明查询的密码已经不能再使用了。</p>
+<p><img src="https://i.loli.net/2018/11/20/5bf4129e200a2.png" alt="Selection_002"></p>
+<p>如果显示结果是 Good news–no pwnage found!,也只是表示这个密码在密码泄漏库中没有，但并不表示它是强密码。</p>
+<p><img src="https://i.loli.net/2018/11/20/5bf4155829958.png" alt="Selection_003"></p>
+<p>在延伸阅读《开发者如何错误地使用密码》文章中提到了 Troy Hunt, 他是澳大利亚微软区域总监兼微软开发者安全专家。从 2011 年开始参与微软社区里的网络安全问题。他参与的重要项目之一就是 <a href="https://www.haveibeenpwned.com" target="_blank" rel="noopener">Have I been pwned</a>，这是一项免费服务，收集了数据泄漏，帮助网民确认他们是否受到了网络恶意行为的影响。</p>
+<p>在 21 世纪，我们可以做得更好，也就是用字母和数字组合的更长、更复杂的密码。以下是自动、手动两种作法。</p>
+<h2 id="自动管理密码：使用密码管理器"><a href="#自动管理密码：使用密码管理器" class="headerlink" title="自动管理密码：使用密码管理器"></a>自动管理密码：使用密码管理器</h2><p>最简单的方式是放弃创建你自己的密码，使用简单的自动化生成。有若干数字密码管理工具。它们不仅可以把密码存储在一个加密的金库里，当你需要密码的时候也允许一键获取，密码管理工具还可以为每个网站生成新的强、独特的密码。</p>
+<p>使用密码管理器会有两个问题。</p>
+<ul>
+<li><p>其一，密码管理器使用一个管理员密码来获得其它密码。如果有人碰巧使用恶意软件感染了你的电脑，当恶意软件记录每次按键输入，会盗取密码数据和管理员密码。这下就完蛋了！黑客会利用密码管理软件的后门获取密码。</p>
+</li>
+<li><p>其二，如果你丢失了管理员密码，意味着你丢了所有密码。最终，即使你可以重置每个密码，但如果有大量账户，这将会是一个很大的工作量。</p>
+</li>
+</ul>
+<p>尽管存在这些缺点，但下列小技巧应该足够保证密码安全。</p>
+<ol>
+<li><p><strong>强密码口令（短语），而不是密码，应该足够长，至少 20-25 字符。</strong> 随机字符的作用最好，但人类大脑难以记住随机序列。所以需要使用一个密码管理工具。推荐使用开源的密码管理工具，只在你的电脑本地存储数据，例如 Password Safe、KeePass.</p>
+</li>
+<li><p><strong>对两个不同的帐号，从不使用相同的密码。</strong> 密码管理工具可以生成和存储强而唯一的密码。</p>
+</li>
+</ol>
+<p>在延伸阅读中提到，从 20 世纪 70 年代开始考虑安全存储密码，经过了使用哈希处理、BCrypt 算法处理密码，算法处理已经来不及抵挡强制破解密码，再加上很多网站还没有限制连续重复登录请求、使用验证码的情况下，要求用户在设置密码的时候遵守「至少只用数字、标点符号」这类复杂规则，并<strong>没有帮助解决密码重复使用、密码弱、将个人信息输入密码的问题</strong>。</p>
+<h2 id="手动创建并写下密码"><a href="#手动创建并写下密码" class="headerlink" title="手动创建并写下密码"></a>手动创建并写下密码</h2><ol>
+<li>用纸写下密码，不要直接把账户、密码全部写出来，例如：中国银行：3sto7ghendp1vbs*.</li>
+<li>用隐晦的词汇代替账户，密码只写一部分</li>
+</ol>
+<h2 id="密码保护之外的设备保护"><a href="#密码保护之外的设备保护" class="headerlink" title="密码保护之外的设备保护"></a>密码保护之外的设备保护</h2><p>不要轻易随便与别人共享帐号密码。</p>
+<p>除了密码保护在线服务，也应该用密码保护个人设备（电脑、手机、平板等），需要设置一个开机密码或者屏保密码。 </p>
+<h3 id="三种常见的给手机（Android-iOS-其它类型）加锁方法"><a href="#三种常见的给手机（Android-iOS-其它类型）加锁方法" class="headerlink" title="三种常见的给手机（Android/iOS/其它类型）加锁方法"></a>三种常见的给手机（Android/iOS/其它类型）加锁方法</h3><ol>
+<li><p>passcode：最常见的一种方式，以特别的顺序输入的一连串数字</p>
+<ol>
+<li>不要用手机号码里的数字设置</li>
+<li>有些设备也支持 text-based passcode , 字母与数字混合</li>
+</ol>
+</li>
+<li><p>另一种是 visual<br> Android：Android lock patterns：140704 种组合<br> <img src="https://i.loli.net/2018/11/18/5bf13c5e5a3c0.jpg" alt="alps"></p>
+</li>
+<li><p>第三种：biometrics 指纹解锁，人脸识别</p>
+</li>
+</ol>
+<p>建议 Biometrics 和 passcode 结合使用。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://rosescats.github.io/2018/11/18/password-art-of-invisibility/" data-id="cju42qpmy000qkft560f88zw9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/隐私安全/">隐私安全</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-learning/e-learning-30-graph" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/10/learning/e-learning-30-graph/" class="article-date">
+  <time datetime="2018-11-10T00:00:00.000Z" itemprop="datePublished">2018-11-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/learn/">learn</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/10/learning/e-learning-30-graph/">E-Learning 3.0 MOOC 之 图表</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第三课 Graph 链接：<a href="https://el30.mooc.ca/cgi-bin/page.cgi?module=7" target="_blank" rel="noopener">https://el30.mooc.ca/cgi-bin/page.cgi?module=7</a></p>
+<h2 id="课程概要"><a href="#课程概要" class="headerlink" title="课程概要"></a>课程概要</h2><p>图表（Graph）是 web3 网络的概念性基础，这个概念对于研究「连接主义」（Connectivism）的人来说很熟悉，因为连接主义的观点是知识由网络中节点的关系组成，换句话说，知识是一种图表（不是讲述一连串事实和结构）。</p>
+<p>图表，尤其动态图表有特别的属性，其结果可以在社交网络理论、现代人工智能、经济和政治理论中找到。</p>
+<p>以前在互联网上，有关图表的工作与图表的语义有关。例如我们说像<a href="https://zh.wikipedia.org/wiki/%E8%AF%AD%E4%B9%89%E7%BD%91" target="_blank" rel="noopener">语义网(semantic web)</a>和信任网络(<a href="https://en.wikipedia.org/wiki/Web_of_trust" target="_blank" rel="noopener">Web of Trust</a>, WOT)的发展。这些都是有限的成功。在 web3 中，节点之间的连接（「边」）是使用密码学创建的，因此创建了具有不腐败连接(incorruptible connections)的链或者树。</p>
+<p>about Semantic web :<br><a href="https://www.w3.org/standards/semanticweb/" target="_blank" rel="noopener">https://www.w3.org/standards/semanticweb/</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/语义网" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/语义网</a></p>
+<p>其中一个例子是梅克尔树(Merkle Tree),树枝包含叶子的哈希，树干包含树枝的哈希。图表——例如有向无环图(<a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph" target="_blank" rel="noopener">Directed Acyclic Graph</a>) 可以这种方式创建。</p>
+<p>我们可以使用这些技术已经建立的的数据结构，创建一种新型内容。一个著名的例子是比特币，它基于块环链的交易记录，本质上是一个已有链。另一个例子是存储在 GitHub 上的软件更新版本的集合，GitHub 使用 DAGs 管理版本控制和软件复制。归属网络、概念网络、网站，所有这些都可以用图表来表示。</p>
+<p>在连接主义中，我们探讨过将知识视为图、将学习视为图表的增长和操作的思想。它帮助学习者理解每个想法与另一个的关系，重要的不是个人观点，而是整个图表如何增长和发展。</p>
+<p>它帮助我们理解图表——甚至知识——不仅是一个表象系统，还是一个感知系统，图表不仅是仓库，还是一个由周围环境塑造的增长型、动态实体。</p>
+<p>图表和图表理论以一种具体的方式展示每个事物如何依靠其它事物，并且帮助我们把对自己的理解、知识、工作放在一个更广阔的背景下。哈希图通过列举克隆、仿造、版本控制、合并，进一步说明了基本的知识创造机制。</p>
+<hr>
+<p>Ben Werdmuller 认为区块链技术并不是完全匿名，可以从元数据(metadata)分析出发布信息、交易双方的身份，包括应用在安全聊天软件中，它只是让推断分析真实身份更加难。metada makes something open.</p>
+<p>Indieweb：用户应该能够从您自己的网站分享，讨论和发布，最好是从您自己的域名中分享，不受任何单一公司的负面控制，现在大多数对话和大部分话语都是发生在网络上以及由极少数非常富有的公司如Facebook，Twitter和Linkedln所拥有的空间中。</p>
+<p>Unlock：直接连接读者与作者。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://rosescats.github.io/2018/11/10/learning/e-learning-30-graph/" data-id="cju42qpo0002gkft5ig2d6xa4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/el30/">el30</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-what-should-you-think-about-when-using-facebook-zh_cht" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/03/what-should-you-think-about-when-using-facebook-zh_cht/" class="article-date">
+  <time datetime="2018-11-03T00:00:00.000Z" itemprop="datePublished">2018-11-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/translation/">translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/03/what-should-you-think-about-when-using-facebook-zh_cht/">使用 Facebook 時，應該考慮什么？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>原文：<a href="https://veekaybee.github.io/2017/02/01/facebook-is-collecting-this/" target="_blank" rel="noopener">https://veekaybee.github.io/2017/02/01/facebook-is-collecting-this/</a></p>
+</blockquote>
+<p><img src="https://i.loli.net/2018/08/31/5b8931e1c585a.jpg" alt="winnower.jpg"><br><strong>Courbet, The Winnowers</strong></p>
+<p>摘要：Facebook 通過眾多渠道使用數百種方法收集有關你的數據。你很難退出，但通過了解他們收集的內容，可以認識到 Facebook 平台的危險性，并選擇以更嚴格的限制來使用 Facebook.</p>
+<p>目錄：</p>
+<ul>
+<li><a href="#Facebook如何收集數據">Facebook 如何收集數據</a></li>
+<li><a href="#在你發布之前，Facebook知道什么">在你發布之前，Facebook 知道什么</a></li>
+<li><a href="#發帖之后：Facebook收集有關你的內容">發帖之后：Facebook 收集有關你的內容</a></li>
+<li><a href="#Facebook內部用你的數據做了什么">Facebook 內部用你的數據做了什么</a><ul>
+<li><a href="#影子檔案">影子檔案</a></li>
+</ul>
+</li>
+<li><a href="#Facebook和營銷商是什么關系">Facebook 和 營銷商是什么關系</a></li>
+<li><a href="#Facebook向政府提供哪些數據">Facebook 向政府提供哪些數據</a></li>
+<li><a href="#退出Facebook后，Facebook會跟蹤什么">你退出 Facebook , Facebook 會跟蹤什么</a></li>
+<li><a href="#當我使用Facebook時，應該考慮什么？">當我使用 Facebook 時，應該考慮什么？</a></li>
+<li><a href="#如果我不想讓Facebook獲取我的數據，應該怎樣做？">如果我不想讓 Facebook 獲取我的數據，應該怎樣做？</a></li>
+</ul>
+<p>Facebook 無論好壞，已經成為我們的網絡客廳、<a href="https://en.wikipedia.org/wiki/Third_place" target="_blank" rel="noopener">第三空間</a>。這是我們與好友交談、發布新聞、組織活動、悼念逝者、慶祝嬰兒出生、訂婚、找新工作、展示新發型和假期的地方。</p>
+<p>Facebook 平台已經占據了如此大的占有率，并且開始作為我們的<a href="http://harrypotter.wikia.com/wiki/Pensieve" target="_blank" rel="noopener">冥想盆</a>。因此，了解 Facebook 公司獲取使用我們的希望、夢想、政治宣言、嬰兒照片信息做什么尤為重要。</p>
+<p>從獲取數據開始。2014年，Facebook 工程師寫到他們<a href="https://code.facebook.com/posts/229861827208629/scaling-the-facebook-data-warehouse-to-300-pb/" target="_blank" rel="noopener">每天可以獲取大約 600TB 的數據</a>。</p>
+<p>對比一下，《戰爭與和平》的文本大小是3.1MB；1966年的蘇聯版《戰爭與和平》電影時長7小時，大小是<a href="https://www.reddit.com/r/iphone/comments/462isr/get_some_storage_back_by_trying_to_download_a/" target="_blank" rel="noopener">8GB</a>。</p>
+<p>因此，人們每天上傳的數據總量相當於1.93億本《戰爭與和平》書籍、75,000部《戰爭與和平》電影。</p>
+<p><a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener">Facebook 數據政策</a> 概述了它收集的內容和如何處理數據。然而，和大多數公司一樣，Facebook 忽視了實際要點，沒有告訴用戶到底發生會什么。</p>
+<p>我揣測自己寫每條狀態更新時的按鍵，使我感到沮喪，對此決定做一些研究。以下所有信息來自科技商業新聞報導、學朮出版物、我作為 Facebook 用戶能夠在客戶端看到的內容。作為一名從事用戶數據工作10年以上的專家，我在這篇文章中加入了自己的詮釋。</p>
+<p>如果任何一位 Facebook 員工想要對此篇文章進行糾正，我會很樂意聽他們說并沒有像下文所說的那樣收集和處理用戶數據。</p>
+<h2 id="Facebook-如何收集數據"><a href="#Facebook-如何收集數據" class="headerlink" title="Facebook 如何收集數據"></a>Facebook 如何收集數據</h2><p>為了理解 Facebook 數據收集的工作原理，我繪制了一個（非常非常）簡單的圖表。用戶將數據輸入用戶界面（應用程序），這是前端。</p>
+<p>這些數據隨后被收集到 Facebook 的數據庫（這些數據庫有很多），這是后台。</p>
+<p>用戶在前端看到的數據是后台數據的子集。</p>
+<p><img src="https://i.loli.net/2018/08/31/5b89330d60b19.png" alt="facebookui.png"></p>
+<p>如果你對更多的技朮規格感興趣，Google 上面有很多架搆圖。Facebook 正處在處理大數據的前沿，它們的堆棧包括 Hive, Hadoop, HBase, BigPipe, MySQL, Memcached, Thrift 更多。所有這些都存放在許多大型數據中心，比如 Prineville Oregon 數據中心。</p>
+<h2 id="在發帖之前，Facebook-知道什么？"><a href="#在發帖之前，Facebook-知道什么？" class="headerlink" title="在發帖之前，Facebook 知道什么？"></a>在發帖之前，Facebook 知道什么？</h2><blockquote>
+<p>在點擊”post”之前，Facebook 可能就開始收集數據了。當你編輯信息時，<a href="http://www.slate.com/articles/technology/future_tense/2013/12/facebook_self_censorship_what_happens_to_the_posts_you_don_t_publish.html" target="_blank" rel="noopener">Facebook 開始收集你的按鍵內容</a>。</p>
+</blockquote>
+<p>Facebook <a href="http://www.aaai.org/ocs/index.php/ICWSM/ICWSM13/paper/viewFile/6093/6350" target="_blank" rel="noopener">曾經使用這些數據來研究自我審查</a>（研究報告 PDF）。</p>
+<p><img src="https://i.loli.net/2018/08/31/5b89330ce3682.png" alt="prepost.png"></p>
+<p>研究員寫道：</p>
+<blockquote>
+<p>我們報告的結果來自一份探索性分析，檢查 Facebook 「最后時刻」的自我審查，或者在寫完后在 Facebook 被過濾的內容。我們在 17 天內收集了 390萬名用戶的數據，并將自我審查行為與用戶描述、用戶社交圖表以及他們之間的互動特徵聯系起來。</p>
+</blockquote>
+<p>這意味着，如果你發布了類似於「我只是討厭我的老板，他把我逼瘋了。」這樣的內容。雖然在最后一刻刪除了這句話，改寫為「伙計，現在的工作真是太瘋狂了」，Facebook 仍然知道你在刪除之前輸入的內容。</p>
+<p>以下是他們用於研究的數據點：</p>
+<p><img src="https://i.loli.net/2018/08/31/5b89330d1426a.png" alt="prethought.png"></p>
+<p>這里值得注意的是：就像不能確保未發布的內容不會被存儲；用戶刪除帖子、評論和簽到，不能確保數據真的被刪除了。</p>
+<p>因此，即使刪除了帖子，Facebook 仍記錄了它。Facebook 記錄<a href="http://www.ruanyifeng.com/blog/2007/03/metadata.html" target="_blank" rel="noopener">元數據</a>，或記錄有關你的數據的數據。比如，撥打電話的數據就是實際談話內容，它的元數據是撥打電話的時間、地點和時長等信息。</p>
+<p>對於 Facebook 來說，元數據和真實數據同等重要，它使用元數據推斷你的身份。在 Chrome 瀏覽器使用開發者工具，可以相對容易地看到大量數據通過 xhr 從你的客戶端傳送到 Facebook 后端。我不是一個前端忍者（但實際上我很樂意和其中一位談話，看看我們還能做些什么），但從一張圖上，可以看到 Facebook 在追蹤用戶做某件事花費的時間嗎？具體內容不確定，但它可能計算出了耗費在 Facebook 網站的時間。<a href="https://www.nytimes.com/2016/05/06/business/facebook-bends-the-rules-of-audience-engagement-to-its-advantage.html?_r=0" target="_blank" rel="noopener">Facebook 報道說</a>。</p>
+<p><img src="https://i.loli.net/2018/08/31/5b89330d36265.png" alt="xhr-fb.png"></p>
+<p>順便說一句，對於賬戶刪除也是如此。</p>
+<p>由於 Facebook 擁有如此多的系統和可以數據共混的地方，正如一位 Facebook 前顧問所寫：</p>
+<blockquote>
+<p>回答你提問的第一部分，「你可以付錢讓 Facebook 徹底刪除你的所有信息嗎？」假設「徹底」意味着完全清除你留在 Facebook 的任何痕跡。答案是不會。</p>
+</blockquote>
+<p>同樣，如果刪除帖子，并不能確保 Facebook 不會在后台數據庫保存這個帖子，它只是不會顯示在客戶端頁面。</p>
+<p>只要你真的寫了帖子、上傳了圖片，或是修改了任何信息，對於 Facebook 內部研究使用、轉售給 Acxiom 這樣的營銷聚合商、<a href="http://www.nytimes.com/2013/09/29/us/nsa-examines-social-networks-of-us-citizens.html" target="_blank" rel="noopener">通過國家安全局這樣的機搆</a>和 NSA 的稜鏡計划提供給美國政府，這一切都是絕對公平的游戲。</p>
+<h2 id="發帖之后：Facebook-收集關於你的什么數據"><a href="#發帖之后：Facebook-收集關於你的什么數據" class="headerlink" title="發帖之后：Facebook 收集關於你的什么數據"></a>發帖之后：Facebook 收集關於你的什么數據</h2><p>很顯然，Facebook 收集你自願提供給它們的所有數據：政治派別、工作地點、最喜歡的電影、最愛讀的書、打卡簽到的位置、評論、對帖子的任何所有反應。Facebook <a href="https://www.facebook.com/help/302796099745838" target="_blank" rel="noopener">允許你下載他們的數據庫中關於你的數據子集</a>。</p>
+<p>在我個人的數據子集中，我可以看到：</p>
+<ul>
+<li>我上傳的照片、標記了我的照片</li>
+<li>視頻</li>
+<li>我曾經發布在自己時間線上的一切內容（包括我表示感興趣的事情、人們發布在我的時間軸上的內容、共享的記憶）</li>
+<li>好友、添加我為他們的好友</li>
+<li>我的所有私人信息</li>
+<li>我參加過的活動</li>
+<li>我登錄過的每一台設備</li>
+</ul>
+<p>以及，我可能感興趣的廣告。這不是我自己寫的東西，而是 Facebook 基於我發布的每條內容，利用算法生成的。</p>
+<p>我們將會在廣告部分討論這個問題。</p>
+<p>除了數據和元數據，Facebook 也跟蹤用戶的意圖。上面已經探討了其中一種跟蹤方式：未發布的信息，另一種則是在視頻中的<a href="https://techcrunch.com/2016/08/10/360-storytelling/" target="_blank" rel="noopener">熱圖跟蹤</a>。</p>
+<p>Facebook不僅知道關於你的一切信息，也了解你的朋友關系。一言以蔽之，Facebook 很了解你，盡管你沒有完整填寫你的個人資料、也沒有主動發布到網站。</p>
+<h2 id="Facebook-內部用你的數據做了什么？"><a href="#Facebook-內部用你的數據做了什么？" class="headerlink" title="Facebook 內部用你的數據做了什么？"></a>Facebook 內部用你的數據做了什么？</h2><p>Facebook 利用收集到的數據做了很多事情。</p>
+<p>首先，Facebook 對信息進行簡單查詢用於提高網站性能或用於行業報告（例如，網站運行時間，<a href="http://veekaybee.github.io/how-many-users-do-you-have/" target="_blank" rel="noopener">Facebook 用戶數量</a>，今天的廣告收入是多少？）。這對於任何公司都是如此。</p>
+<p>不過，對於 Facebook 來說有所轉變。Facebook 有一個完整的工程團隊致力於搭建工具，使得數據更易於用 SQL——類似基於 Hadoop 和 <a href="https://www.facebook.com/notes/facebook-engineering/hive-a-petabyte-scale-data-warehouse-using-hadoop/89508453919/" target="_blank" rel="noopener">Hive</a> 的語言——查詢。盡管 Facebook 聲稱嚴格控制權限，有些用戶卻并<a href="http://www.techtimes.com/articles/36186/20150227/who-access-account-details-facebook.htm#sthash.GXFknTxA.dpuf" target="_blank" rel="noopener">不這么認為</a>。</p>
+<blockquote>
+<p>唱片公司 Anjunabeats 主管 Paavo Siljamäki 在 Facebook 發帖提醒人們注意這個問題，訪問該公司洛杉磯辦事處時，可以很容易訪問他的 Facebook 賬戶而無需他的密碼。</p>
+</blockquote>
+<p>這里是<a href="https://www.quora.com/Do-Mark-Zuckerberg-or-Facebook-employees-have-a-skeleton-key-granting-them-access-to-every-members-Facebook-profile-page-and-information" target="_blank" rel="noopener"> Facebook 員工訪問私人數據的賬戶的更多說明</a>。</p>
+<p>其次，Facebook 把用戶作為實驗對象進行學朮研究。在數據政策中沒有提到這一點，這很有意思， <a href="https://research.fb.com/" target="_blank" rel="noopener">Facebook Research 主頁</a>的標題寫着：「在 Facebook, 研究滲透到我們所做的一切。」</p>
+<p>Facebook 有一個相當大的數據科學團隊（<a href="https://research.fb.com/people/page/3/?cat=6" target="_blank" rel="noopener">最新統計是 41 人</a>）。我想說的是，一個擁有 15000 人同樣規模的公司，如果它真的想要積極推動一個數據科學研究項目，可能只有 5 個數據科學家。</p>
+<p>然而，直到 2014 年為止，還沒有任何程序可以檢查被訪問的數據類型、以及進行怎樣的研究。正如一位<a href="http://andrewledvina.com/code/2014/07/04/10-ways-facebook-is-the-devil.html" target="_blank" rel="noopener">前 Facebook 數據科學家寫到</a>：</p>
+<blockquote>
+<p>我在 Facebook 的時候，沒有一個機搆審查委員會來審查為內部目的進行實驗的決定。一旦有人得出結論，他們決定要把這篇文章發表到雜志上，那么在可發表的內容上，確實存在反反復復的公共關系和法律問題。如果你想做一個實驗，看看人們會點擊綠色按鈕還是藍色按鈕，你無需得到批准。同樣，如果要測試新的廣告定位系統，以查看用戶是否點擊了更多廣告，是否收入增加，無需獲得機搆批准。</p>
+</blockquote>
+<p>雖然他接着指出這在大多數以軟件服務的公司中是正常的，但大多數 SaaS 公司在過去十多年中也沒有精心收集人們生活中最私密的細節。</p>
+<p>他繼續說道：</p>
+<blockquote>
+<p>大多數人在 Facebook 研究數據的基本目的是影響和改變人們的情緒和行為。他們一直在做這件事，讓你更喜歡故事，點擊更多的廣告，花費更多時間在 Facebook 網站。</p>
+</blockquote>
+<p>盡管這是大多數網站的目標，但每天<a href="http://www.businessinsider.com/how-much-time-people-spend-on-facebook-per-day-2015-7" target="_blank" rel="noopener">花費超過 40 分鐘</a> 在企圖在情感上削弱你的網站上，你可能需要三思而后行。</p>
+<p>Facebook 除了挖掘文本內容、<a href="https://research.fb.com/support-when-you-re-feeling-blue/" target="_blank" rel="noopener">研究我們的情緒</a>，它還會<a href="https://www.theguardian.com/technology/2014/jun/29/facebook-users-emotions-news-feeds" target="_blank" rel="noopener">操縱它們</a>。</p>
+<p>新聞 Feed 是操作的首選。特別是因為 Facebook 已經設計出盡可能吸引人的功能：它是我們神經系統的突觸糖。Facebook 希望確保你<a href="http://newsroom.fb.com/news/2015/06/news-feed-fyi-taking-into-account-time-spent-on-stories/" target="_blank" rel="noopener">盡可能在 Feed </a>多花時間，并為此花<a href="https://www.wired.com/2014/04/babies-on-facebook/" target="_blank" rel="noopener">更多時間來處理嬰兒照片</a>和其它快樂的事情，以及那些引發爭議和憤怒的新聞。而像「我今天吃過早餐」這樣的正常狀態不會引起任何反應。</p>
+<p>這就是當今所謂過濾氣泡是怎樣興起的。因為人們會點一些他們感興趣的東西，所以 Facebook 就只呈現吸引用戶的內容，這意味着其他觀點、朋友和圖片會從一個人的 Facebook Feed 中刪除。如果想了解這種方式是如何工作的，可以參考 <a href="http://graphics.wsj.com/blue-feed-red-feed/" target="_blank" rel="noopener">Red Feed、Blue Feed</a>, 展示了自由與保守的 Facebook Feed 的不同之處。</p>
+<p>他們還在研究其它什么？首先是<a href="gay">同性戀出櫃</a>比例。Facebook 如何知道這些的？「在過去的一年里，大約有 80 萬美國人更新他們的個人資料，表達同性吸引或專屬性別」。</p>
+<p>大量的 Facebook 研究都是關於圖論，也就是我們和朋友間的關系圖。換句話說，它正在對從未同意的學科進行人類學研究。</p>
+<p>例如在近期，數據科學小組發表了一項關於<a href="https://research.fb.com/publications/the-social-ties-of-immigrant-communities-in-the-united-states/" target="_blank" rel="noopener">美國移民社區的社會關系</a>的研究。在報告中，研究員使用了以下數據：</p>
+<blockquote>
+<p>我們將我們的分析限制在基於已經被確認的社交網絡數據基礎上的綜合判斷，這些人在分析前 30 天內至少使用過一次 Facebook. 我們使用個人資料中指定的家鄉來確定用戶的國籍。</p>
+</blockquote>
+<blockquote>
+<p>此外，我們也把分析限制在目前至少有2個朋友居住在本國的人和目前居中在美國的另外 2 個朋友。我們的結果基於超過 1000 萬滿足這些標准的人的樣本。整篇報告中，所有關於 Facebook 用戶的引用都毋庸置疑地暗示了這些限制。</p>
+</blockquote>
+<p>這些是我們知道的公開研究，他們還在做哪些非公開的研究？</p>
+<p>Facebook 理所當然喜歡研究的另一個內容是<a href="https://www.bloomberg.com/news/articles/2016-10-26/is-facebook-s-facial-scanning-technology-invading-your-privacy-rights" target="_blank" rel="noopener">人臉</a>。每次你在照片中標記自己時，Facebook 會認出你，并且做相應調整。</p>
+<blockquote>
+<p>Facebook 鼓勵用戶在他們個人帖子中上傳的照片中「標記」人，社交網絡將收集到的信息儲存起來。Facebook 使用一個叫作 DeepFace 的程序來匹配用戶的其它照片。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2018/08/31/5b89330d3ab7e.png" alt="selfie.png"></p>
+<p>這個名為 DeepFace 的程序是獲取更多准確標簽的絕佳方式。它也是侵犯個人隱私的絕佳手段。比如，倘若你不想被標記該怎么辦？假如你在政府抗議活動中？或者簡單來說，如果你和一位朋友去聽音樂會，不是和另一位朋友，卻還不想讓對方知道，該怎么辦？</p>
+<p>不幸的是，很快就沒有隱私可言了。Facebook 正致力於<a href="http://fortune.com/2015/06/23/facebook-facial-recognition/" target="_blank" rel="noopener">識別照片中人的身份</a>。Facebook 上<a href="https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf" target="_blank" rel="noopener">關於 DeepFace 的論文</a>指出，「人臉識別技朮對社會和文化影響是深遠的」，然而根本沒有談到人臉被標記的可能的隱私危險。<a href="http://spectrum.ieee.org/biomedical/imaging/facebooks-face-recognition-tech-goes-on-trial" target="_blank" rel="noopener">比如</a>：</p>
+<blockquote>
+<p>她說，『我們很快就會在商店里安裝攝像頭，以識別顧客的購物情況』。</p>
+</blockquote>
+<p>他們怎么知道這些的？</p>
+<p>因為這些數據是我們自願提供的。每次更新狀態、上傳照片并做標記、給朋友發信息、在一個地方簽到、登錄 Facebook, 系統都會自動生成一條信息保存到數據庫中——「嘿，這個人現在在Facebook 世界里。」，包括了 <a href="https://techcrunch.com/2016/08/25/whatsapp-to-share-user-data-with-facebook-for-ad-targeting-heres-how-to-opt-out/" target="_blank" rel="noopener">Whatsapp</a> 和 <a href="https://help.instagram.com/833836199971426?helpref=uf_permalink" target="_blank" rel="noopener">Instagram</a> 兩個應用。</p>
+<h3 id="影子檔案"><a href="#影子檔案" class="headerlink" title="影子檔案"></a>影子檔案</h3><p>如果你不願意分享那么多數據，Facebook 會怎么做？它創建了<a href="https://spideroak.com/articles/facebook-shadow-profiles-a-profile-of-you-that-you-never-created" target="_blank" rel="noopener">影子檔案</a>或是「Facebook 收集的有關你沒有提供的數據集」。</p>
+<p>正如這篇文章所述：</p>
+<blockquote>
+<p>盡管你從未提供它們，但 Facebook 很有可能獲取了你的備用郵箱地址、電話號碼、家庭地址。所有這些都是由嘗試尋找并聯系你的朋友提供的。</p>
+</blockquote>
+<p>更糟糕的是，Facebook 主要收集你的<a href="http://spectrum.ieee.org/biomedical/imaging/facebooks-face-recognition-tech-goes-on-trial" target="_blank" rel="noopener">面部</a>信息。</p>
+<blockquote>
+<p>最近的一起訴訟不是針對郵箱地址和電話號碼，而是「人臉模板」：每當用戶上傳照片時，Facebook 會掃描所有人臉并創建「數字生物識別模板」。</p>
+</blockquote>
+<p>即使 Facebook 只是為自己收集數據，所有這一切也是有關系的。但還有一些外部供應商。</p>
+<h2 id="Facebook-和營銷人員是什么關系？"><a href="#Facebook-和營銷人員是什么關系？" class="headerlink" title="Facebook 和營銷人員是什么關系？"></a>Facebook 和營銷人員是什么關系？</h2><p>Facebook 的數據政策指出，它和其它供應商合作收集關於你的數據：</p>
+<blockquote>
+<p>我們會從第三方合作伙伴收到有關你和你的 Facebook 在線與離線的活動信息。例如，當我們聯合提供服務時，來自合作伙伴的信息，或從廣告商那里獲得關於你的經曆、與他們互動的信息。</p>
+</blockquote>
+<p><a href="http://www.techtimes.com/articles/190902/20161231/facebook-knows-a-lot-about-your-offline-habits-buying-third-party-data-to-serve-better-targeted-ads.htm" target="_blank" rel="noopener">Facebook 收集</a>了「大約 29,000 個人口統計指標，其中 98% 基於用戶在 Facebook 的活動」。</p>
+<blockquote>
+<p>與此同時，據報道大約有 600 個數據點來自 Experian，Acxiom等獨立數據代理商，用戶無法訪問從第三方獲得的人口統計數據。</p>
+</blockquote>
+<p>除了收集你自願提供的所有詳細信息，比如姓名全稱、出生日期、興趣愛好、宗教信仰、以及所有你上過學和工作過的地方，Facebook 還會對它不知道的事情作出假設，這樣就可以與 Acxiom 、其它廣告代理商分享數據，以便更有效地把你作為目標。</p>
+<p>比如，Facebook 使用家庭收入創建數據檔案賣給營銷商，他們畢竟是 Facebook 的付費客戶。然后，營銷人員可以購買細分資料，包括<a href="https://www.washingtonpost.com/news/the-intersect/wp/2016/08/19/98-personal-data-points-that-facebook-uses-to-target-ads-to-you/?noredirect=on&amp;utm_term=.8f32259f05e5" target="_blank" rel="noopener">以下任何一種</a>：</p>
+<p>地理位置、年齡、世代、性別、語言、教育水平、研究領域、學校、族裔關系、收入和淨資產、房屋所有權和類型、房屋價值、財產大小、房屋面積、建造年份、家庭組成。</p>
+<p>Facebook 如何知道這些的？根據它所知道的和從 Experian 等處獲取的數據，<a href="https://www.quora.com/How-accurate-are-income-levels-in-Facebook-ad-targeting-and-how-does-Facebook-gather-this-information" target="_blank" rel="noopener">對你作出一些假設</a>。</p>
+<p>這類數據隨后可以用來以廣告的形式定位 Facebook 用戶。在 Facebook 做的這種定位告訴你很多關於他們隱藏在幕后的數據。例如，不僅可以通過位置/年齡/性別/語言，還能通過興趣愛好和不同生活階段（如剛剛訂婚、6個月前訂婚、早期學齡兒童）定位目標。如此過細地定位一個人是有可能的，而且還能達到一定數量（在我的例子中是 100-200 人）。</p>
+<p><img src="https://i.loli.net/2018/08/31/5b89330d1032f.png" alt="targeted.png"></p>
+<p>這些數據會被轉賣到下游，通過信用卡和其它營銷資源，與其它既存的關於你的數據混合在一起，從而創建類似<a href="http://www.familytreenow.com/" target="_blank" rel="noopener">這樣的</a>網站，試圖建立你的完整個人資料。沒有簡單的方式來擺脫它，因為一旦創建了數據，<a href="http://idlewords.com/talks/haunted_by_data.htm" target="_blank" rel="noopener">刪除它難上加難了</a>。這就是為什么隱私活動人士最關心的問題之一是讓公司每隔一段時間刪除大量數據。</p>
+<p>Facebook 也有權在廣告里使用你和<a href="https://www.facebook.com/help/116356655118482?helpref=related" target="_blank" rel="noopener">未滿18歲孩子的照片</a>。</p>
+<h2 id="Facebook-給政府提供什么數據？"><a href="#Facebook-給政府提供什么數據？" class="headerlink" title="Facebook 給政府提供什么數據？"></a>Facebook 給政府提供什么數據？</h2><p>我們并不了解 Facebook 提供給政府的所有信息。Facebook 有一個<a href="https://govtrequests.facebook.com/" target="_blank" rel="noopener">政府報告頁面</a>，該頁面自 2016 年6月以來沒有更新過。但我們知道政府還在要求獲取<a href="https://techcrunch.com/2016/12/21/government-requests-for-facebook-user-data-up-27-percent-in-first-half-of-2016/" target="_blank" rel="noopener">越來越多的信息</a>。</p>
+<p>這些數據成為一份報告，報告顯示了數據訪問量和受影響的用戶量，但沒有提到任何關於所提供信息的類型、訪問數據的機搆類型（當地政府、州、聯邦調查局/國家安全局）。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">國家</th>
+<th style="text-align:left">用戶數據要求總量</th>
+<th style="text-align:left">參考的用戶賬戶總數</th>
+<th style="text-align:left">產生某些數據請求的百分比</th>
+<th style="text-align:left">內容限制</th>
+<th style="text-align:left">保存要求</th>
+<th style="text-align:left">保留的用戶/帳號</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">美國</td>
+<td style="text-align:left">23,854</td>
+<td style="text-align:left">38,951</td>
+<td style="text-align:left">80.65%</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">31893</td>
+<td style="text-align:left">56714</td>
+</tr>
+</tbody>
+</table>
+<p>馬克·扎克伯格（Mark Zuckerberg）甚至發表聲明<a href="https://www.facebook.com/zuck/posts/10100828955847631" target="_blank" rel="noopener">說</a>：</p>
+<blockquote>
+<p>Facebook 過去不是，現在也從來沒有參與任何讓美國或任何其它政府直接訪問我們服務器的計划。我們從來沒有收到任何政府機搆的一般要求或法院命令，提供大量信息或元數據的，據說 Verizon 收到過這樣的要求。如果我們這樣做了，會積極與之抗爭。在昨天之前，我們甚至沒聽說過稜鏡計划。</p>
+</blockquote>
+<p>在這里，重要的是從字里行間讀出的含義。直接訪問服務器不是發送大容量文件的必要條件，<a href="https://www.theguardian.com/world/2013/jun/06/us-tech-giants-nsa-data" target="_blank" rel="noopener">也沒有必要以此名了解稜鏡計划</a>。</p>
+<p>也很難知道國家安全局是否<a href="https://www.nytimes.com/2014/06/01/us/nsa-collecting-millions-of-faces-from-web-images.html" target="_blank" rel="noopener">以其它方式從 Facebook</a> 收集數據。至少在歐洲，有關此問題的<a href="http://fortune.com/2016/09/12/facebook-class-action-eu-privacy/" target="_blank" rel="noopener">訴訟正在進行中</a>。</p>
+<p>但就目前而言，僅僅假設這種<a href="http://www.cnn.com/2013/09/30/us/nsa-social-networks/" target="_blank" rel="noopener">監控正在進行</a>。</p>
+<h2 id="退出-Facebook-后，Facebook-會跟蹤什么？"><a href="#退出-Facebook-后，Facebook-會跟蹤什么？" class="headerlink" title="退出 Facebook 后，Facebook 會跟蹤什么？"></a>退出 Facebook 后，Facebook 會跟蹤什么？</h2><p>在 Facebook 網站之外，Facebook 通過<a href="http://venturebeat.com/2014/10/06/the-cookie-is-dead-heres-how-facebook-google-and-apple-are-tracking-you-now/" target="_blank" rel="noopener">單點登錄</a>跟蹤用戶。</p>
+<p>如果你退出，Facebook 也會通過 cookies 跟蹤你。正如它們的<a href="https://www.macobserver.com/tmo/article/facebook-is-tracking-you-even-if-you-dont-have-an-account" target="_blank" rel="noopener">隱私政策所述</a>：</p>
+<blockquote>
+<p>當你訪問或使用第三方網站和應用了我們服務的程序時，我們會收集信息。收集的信息包括訪問的網站和應用程序、在這些網站和應用上使用我們的服務、以及網站或應用的開發者或發布者提供給你或我們的信息。</p>
+</blockquote>
+<p>Facebook 也在試圖跟蹤或已經在跟蹤<a href="http://blogs.wsj.com/cio/2013/10/30/facebook-considers-vast-increase-in-data-collection/" target="_blank" rel="noopener">你的光標在屏幕上的移動情況</a>。</p>
+<p>早在 2011 年，<a href="http://lifehacker.com/5843969/facebook-is-tracking-your-every-move-on-the-web-heres-how-to-stop-it" target="_blank" rel="noopener">如果你仍然登錄着 Facebook, 它就開始跟蹤你如何在網絡上移動</a>。</p>
+<blockquote>
+<p>未經你同意，Facebook 會記錄你登錄后所在網頁的位置。Nik Cubrilovic 深入挖掘了一下，發現即使登出 Facebook 仍會跟蹤你的位置。Facebook 否定了這一說法。</p>
+</blockquote>
+<p>可以肯定的是，Facebook <a href="http://gizmodo.com/how-to-stop-facebook-from-sharing-your-browsing-history-1589918083" target="_blank" rel="noopener">收集你的瀏覽曆史來丰富廣告。</a></p>
+<h2 id="當我使用-Facebook-時應該考慮什么？"><a href="#當我使用-Facebook-時應該考慮什么？" class="headerlink" title="當我使用 Facebook 時應該考慮什么？"></a>當我使用 Facebook 時應該考慮什么？</h2><p>這一切意味着什么？從本質上講，它意味着你在 Facebook 上做的每件事情，或是通過其它網站登錄，都可能會被 Facebook 偷偷地跟蹤并保留在服務器上。</p>
+<p>需要明確的是，很多公司目前都會對用戶進行某種形式的跟蹤。除此以外，沒有其它方式可以衡量經營活動。但是 Facebook 顯然在一段時間內躡手躡腳地走出了道德上可接受的數據業務實踐的范圍。盡管 Facebook 目前沒有做我提及的一些事情（抓取預發布內容、擾亂新聞訂閱源），但它們也在做着非常相似的工作，而且沒有隱私保障和，也不保證不用於實驗。這也意味着即使你在 Facebook 并不活躍，仍會被跟蹤。</p>
+<p>每個像你這樣的人發的帖子、添加的每個好友、簽到的每個地方、點擊的每個產品類別、每張照片，都會保存在 Facebook 并被聚合在一起。</p>
+<p>如何聚合？很難描述。可能是社會實驗的一部分，也許你的信息正被提交給政府部門；也許Facebook 的那些沒有必要擁有此權限的員工可以訪問你的頁面、查看你的工作經曆；也許相同的就業信息正被發送給保險公司。</p>
+<p>這包括了所有的私人小組、封閉小組以及所有的消息。正如 Facebook 指出的，在 Facebook 不存在隱私這回事。</p>
+<p>實質上，你需要加入 Facebook, 這意味着接受你做的每件事情都會被公開，或是被用於廣告、政府機搆分析。</p>
+<h2 id="如果不想讓-Facebook-獲取我的數據，應該怎么辦？"><a href="#如果不想讓-Facebook-獲取我的數據，應該怎么辦？" class="headerlink" title="如果不想讓 Facebook 獲取我的數據，應該怎么辦？"></a>如果不想讓 Facebook 獲取我的數據，應該怎么辦？</h2><p>Facebook 開始是大學生互相聯系的一種方式，最終達到了改變人們行為、跟蹤用戶使用情況，并且可能為政府整合信息的程度。</p>
+<p>問題在於無論誰是否使用 Facebook, 都牽涉到 Facebook 的跟蹤、關系標簽、影子檔案系統。如果你是 Facebook 活躍用戶，尤其如此。</p>
+<p>因此，最重要的事情是意識到這種情況正在發生，并盡可能少給 Facebook 提供數據。</p>
+<p>下列是我為了盡量減少在 Facebook 的曝光而做的事情。</p>
+<p>并非每個人都會像我這樣做。但最重要的是，即使你決定繼續使用 Facebook , 也要知道Facebook 在使用你的數據做什么，并且有權在社交中作出權衡。</p>
+<ol>
+<li>不要發布過多的個人信息。</li>
+<li>不要發布你孩子的任何照片，特別是當他們處在無法同意的年齡。</li>
+<li>當你用瀏覽器訪問 Facebook 后, 退出 Facebook. 使用一個單獨的瀏覽器訪問 Facebook, 其它事情則用另一個單獨的瀏覽器。</li>
+<li>使用<a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en" target="_blank" rel="noopener">廣告攔截</a>插件。</li>
+<li>組織或參與政治活動，不要使用 Facebook , 尤其是 Messenger 應用。如果你需要組織活動，用 Facebook 作為發起端，然后換用別的平台。推荐平台：Signal 是目前私密聊天的典范。Whatsapp 的群組聊天是可以的，但我不推荐它，因為它與 Facebook 的元數據系統緊密相聯。電報（Telegram）也不錯，但還不夠好，因為它不是開源應用。此外，它取決於你的風險等級。這是有關<a href="http://lifehacker.com/signal-the-encrypted-chat-app-is-now-available-on-des-1787103250" target="_blank" rel="noopener">這些平台</a>的<a href="https://www.relativisticramblings.com/ramblings/telegram-vs-signal/" target="_blank" rel="noopener">更多</a>信息。</li>
+<li>不要在手機上安裝 Facebook 應用程序，它會請求許多<a href="https://www.makeuseof.com/tag/use-facebook-android-without-invasive-permissions/" target="_blank" rel="noopener">不合理的權限</a>。</li>
+<li>不要在手機上安裝 Messenger 應用。使用移動端網站。目前，Messenger 應用在移動設備上被屏蔽，<a href="http://www.howtogeek.com/176932/how-to-disable-the-mobile-version-of-a-website-on-your-phone/" target="_blank" rel="noopener">可以在瀏覽器啟用桌面版</a>。</li>
+</ol>
+<p>很遺憾，做得如此好的社交網絡在互聯網上也是最糟糕的。但是，在人們遠離這個平台或對它施加某種經濟壓力之前，任何都不會改變。</p>
+<p>就我個人而言，作為一個數據專家，我個人所做的事情就是給發郵件給我的 Facebook 招聘人員發送以下信息：</p>
+<p>親愛的招聘專員：</p>
+<p>Facebook 收集、使用數據的方式，包括：</p>
+<ul>
+<li>把用戶數據轉售給 Acxiom 這樣的廣告公司；</li>
+<li><a href="https://www.huffingtonpost.com/nate-hanson/how-to-stop-facebook-from_b_8160400.html" target="_blank" rel="noopener">跟蹤用戶瀏覽情況</a>；</li>
+<li><a href="https://www.allbusiness.com/marketers-use-facebooks-facial-recognition-stalk-customers-2-11934-1.html" target="_blank" rel="noopener">人臉識別</a>；</li>
+<li>建立<a href="https://www.dailydot.com/news/facebook-shadow-profiles-privacy-faq/" target="_blank" rel="noopener">影子檔案</a>；</li>
+<li>特別是社會科學實驗，比如<a href="http://www.pnas.org/content/111/24/8788.full" target="_blank" rel="noopener">情感傳染*</a>；</li>
+<li>新聞訂閱源中使用算法，創造<a href="http://Bursting the Facebook bubble: we asked voters on the left and right to swap feeds" target="_blank" rel="noopener">過濾器泡沫</a>；</li>
+<li>最重要的一點，<a href="https://venturebeat.com/2014/05/15/how-the-nsa-fbi-made-facebook-the-perfect-mass-surveillance-tool/" target="_blank" rel="noopener">Facebook 向國家安全局（NSA）等政府機搆提供獲取大量數據的訪問權限</a></li>
+</ul>
+<p>這讓我不僅強烈反對在 Facebook 工作，而且使我有力地評估了自己使用 Facebook. 因為我從來不知道輸入這個系統的每個字符將如何被使用。</p>
+<p>如果 Facebook 公司承諾要改變發展方向，并且</p>
+<ul>
+<li>利用數據來解決這些問題</li>
+<li>積極研究如何<a href="http://idlewords.com/talks/haunted_by_data.htm" target="_blank" rel="noopener">刪除不必要的數據</a></li>
+<li>積極研究非政府干預的私人安全通訊</li>
+<li>并積極研究如何避免私人客戶數據被共享給不必要的第三方</li>
+</ul>
+<p>我很想知道。</p>
+<p>謹啟</p>
+<p>Vicki</p>
+<p>我們是社會性動物，我們想要連接、得到認可、分享、在其他人所在的平台上組織活動。目前而言，這是 Facebook 的優勢。此外，很難說 Facebook 完全是壞的：它的確把人們聯系起來，幫助組織聚會和活動，并且確實使世界更加互聯互通。</p>
+<p>但是，作為 Facebook 用戶，我們和我們的數據是它的產品。而且，隨着我們對這些數據的使用方式了解更多，我們仍然可以按照它的規則使用 Facebook，但要對它有所了解。</p>
+<p><a href="https://news.ycombinator.com/item?id=13559498" target="_blank" rel="noopener">這里是黑客新聞討論區。</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://rosescats.github.io/2018/11/03/what-should-you-think-about-when-using-facebook-zh_cht/" data-id="cju42qpob002xkft5ar7qj6wx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/隐私安全/">隐私安全</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-learning/e-learning-30-data" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/27/learning/e-learning-30-data/" class="article-date">
+  <time datetime="2018-10-27T00:00:00.000Z" itemprop="datePublished">2018-10-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/learn/">learn</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/27/learning/e-learning-30-data/">E-learning 3.0 核心概念之「数据」</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://chenmei.xyz/post/learning-notes/e-learning-30" target="_blank" rel="noopener">第一节课</a>介绍了 web 1.0, web 2.0, web 3.0 的特点，也是不同阶段互联网技术发展的主流应用。</p>
+<p><strong>这是 E-Learning 3.0 MOOC 第二节课程。从本节开始将依次讲解 Web 3.0 同时也是 E-Learning 3.0 涉及的 9 个核心概念。</strong></p>
+<p>本节课程页面在<a href="https://el30.mooc.ca/cgi-bin/page.cgi?module=5" target="_blank" rel="noopener">这里</a>，Stehen Downes 和 <a href="https://about.me/BlakePlock" target="_blank" rel="noopener">Shelly Blake-Plock</a>（Yet Analytics 创始人）对谈：<a href="https://www.youtube.com/watch?v=dsmdwnUwKkA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=dsmdwnUwKkA</a></p>
+<hr>
+<p>这节课的信息量非常大，第一次听说 SCROM、xAPI、LMS、LRS 这些概念，需要从对数据演变过程和去中心化入手。</p>
+<h2 id="在线内容：从文件到数据"><a href="#在线内容：从文件到数据" class="headerlink" title="在线内容：从文件到数据"></a>在线内容：从文件到数据</h2><p>正如 Stephen Downes 在数据这节课的文章 <a href="https://el30.mooc.ca/cgi-bin/page.cgi?post=68416" target="_blank" rel="noopener">https://el30.mooc.ca/cgi-bin/page.cgi?post=68416</a> 里所说，web 1.0 时代基于客户端-服务器模式，以文件和网页为主，在线学习的内容呈现形式也是如此，它们之间没有很好的交互、呈现标准也会不统一，而且 DVD 这类资源存放在用户端，没办法不同多终端使用。web 2.0 出现了基于数据和平台互操作性的网络。web 3.0 时代则将平台作用削弱，直接是终端之间直接交互，也就是分布式网络，也就是 e-learning 3.0.</p>
+<p>在这个过程中，我们对内容的理解从普遍的（现在依旧还在用的）word/pdf/excel/video 等形式文档，随着对内容交互、分布式、共享互相链接的增加，转变扩展到对关于内容、使用者（学习者）的更多<strong>元数据</strong>的获取和分析。</p>
+<blockquote>
+<p> When we created a learning resource, we created data about that resource, and this contained fields like ‘title’ and ‘typical age range’. From there it is a very small step to putting our content into the database as well, and completely converting our document into data. Most web-based content today comes from some sort of database.</p>
+</blockquote>
+<p>例如，创建一份在线数据表单来收集统计一些必要的信息。在这份表单制作中设置的字段和填表对象填写的信息都是数据。现在很多在线表单平台都会提供简单的数据统计分类。</p>
+<p>再比如，Facebook、Google 都会收集有关用户的一切信息，作为分析的 metadata, 在文章<a href="https://chenmei.xyz/post/fan-yi/what-should-you-think-about-when-using-facebook" target="_blank" rel="noopener">「使用 Facebook 时，应该考虑什么？」</a>中，作者 Vicki Boykis 说明了 Facebook 获取用户数据之多，以及如何利用这些数据获利。</p>
+<blockquote>
+<p>The dependence on centralized sources for linked data has led to the rise of platforms like Facebook and Twitter, with the result that people no longer feel in control of their own data, and even worse, have difficulty accessing and sharing this data. Also, it has become increasingly difficult to read this data without being tracked and without being forced to view advertisements and unwelcome messages.</p>
+</blockquote>
+<h2 id="数据：从中心化到-去中心化"><a href="#数据：从中心化到-去中心化" class="headerlink" title="数据：从中心化到 去中心化"></a>数据：从中心化到 去中心化</h2><p>关键词：<strong>去中心化</strong>，<strong>linked data</strong></p>
+<p>如 Yet Analytics 创始人 Shelly Blake-Plock 所说「data goverance can be used for good or evil」(<a href="https://www.lauraritchie.com/2018/10/25/el30-notes-week-1/" target="_blank" rel="noopener">https://www.lauraritchie.com/2018/10/25/el30-notes-week-1/</a>)。我们也可以看到、已经深刻体会到网络上个人隐私安全问题，即使在单纯的在线学习过程中，也需要考虑这一点。去中心化则是一种新的选择。</p>
+<p>除了这一点，更重要的是因为众多数据资源需要直接被获取、便捷共享、互相链接、在不同终端随时随地使用，每个人都可以管理控制自己的数据。</p>
+<p>在 web 2.0 时代，我们把来自不同来源的数据堆积放在同一个网页上，这些都是在网页平台的幕后操作的。浏览器仍然需要从单一的网页上收到内容来呈现和组合。如果我们可以直接获取源数据库，根据自己的需要来选择、组合数据。</p>
+<blockquote>
+<p>From the perspective of the browser, everything is pretty much the same. It doesn’t matter whether a web page was created from one data source or a dozen. The browser still had to visit a web page and still received content from that single source to assemble and display to the viewer.</p>
+</blockquote>
+<p>web 3.0 是一个去中心化链接数据的时代。每个人都可以管理自己的数据，随时随地存储并使用。像 <a href="https://solid.mit.edu/" target="_blank" rel="noopener">Solid</a>、<a href="https://indieweb.org/" target="_blank" rel="noopener">IndieWeb</a> 项目就正在寻找方法，使用户可以创建和管理自己的数据。</p>
+<h2 id="学习者个人如何管理数据"><a href="#学习者个人如何管理数据" class="headerlink" title="学习者个人如何管理数据"></a>学习者个人如何管理数据</h2><p>Stephen Downes 与 Shelly Blake-Plock 对谈中谈到的用于记录、存储、分析学习进度的技术 SCORM、xAPI、LRS 等等，暂时还不想深入了解这些。昨天翻了中文圈的「<a href="http://xapi-cop.net/zh/" target="_blank" rel="noopener">教育大数据国际联盟</a>」网站，里面有一些关于 xAPI 的介绍。目前对我来说有些深奥，还用不到它们。</p>
+<blockquote>
+<p>Learning also becomes a process of being able to comprehend data, to be able to look at representations of data though dashboards and visualizations, and to be able to identify patterns and draw conclusions. It’s interactive, immersive and engaging, a process of learning how to perceive and comprehend rather than to decode and store. </p>
+</blockquote>
+<p><strong>学习也成为能够理解数据、通过仪表盘和可视化来观察数据表现，并能识别模式、得出结论。它是一个互动式、沉浸式、吸引人的过程，是一个学习如何感知（perceive）、理解（comprehend）的过程，而不是简单的解码和存储。</strong></p>
+<p>作为一个自主学习者，在不想将这些数据交由互联网公司获取管理的情况下，个人如何管理自己的学习资源和进度？很高兴看到<a href="https://idstuff.blogspot.com/2018/10/elearning-30-how-do-i-show-my-expertise.html" target="_blank" rel="noopener">「eLearning 3.0: How do I show my expertise?」</a> 这篇思考文章。作者提出了很多问题，认为一个人记录更新自己的学习过程，取决于具体的情况（it depends）。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://rosescats.github.io/2018/10/27/learning/e-learning-30-data/" data-id="cju42qpnz002fkft594egam2w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/el30/">el30</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-learning/e-learning-30" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/20/learning/e-learning-30/" class="article-date">
+  <time datetime="2018-10-20T00:00:00.000Z" itemprop="datePublished">2018-10-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/learn/">learn</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/20/learning/e-learning-30/">学习 E-Learning 3.0 MOOC</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-关联主义与学习"><a href="#1-关联主义与学习" class="headerlink" title="-1. 关联主义与学习"></a><a href="https://el30.mooc.ca/cgi-bin/page.cgi?module=3" target="_blank" rel="noopener">-1. 关联主义与学习</a></h2><p>关联主义(Connectivism) 基于这样一种观点，即知识的本质是网络中联结的集合。因此，学习就是创造和塑造这些网络的过程。</p>
+<p>关联主义课程的重点是发展两种类型的知识：个人知识(personal knowledge)、由活动和经验形成的想法和信念网络；另一种是社会知识，通过交流和互动形成的人与制度的公共网络。</p>
+<p>MOOC 环境是为了支持这两种类型的学习。MOOC 没有一节单一的课堂或学习管理系统；相反，该课程本身是为个人网站或博客之间创建关联，并通过这个网络创建不间断的交流与合作。理想情况下，课程参与者会有管理个人知识网络的工具和方式，通过社交网络进行互动。</p>
+<p>课程内容包括由参与者创建和分享的数字媒体。导师的角色是为课程提供网络资源、参考资料和背景阅读、介绍一些核心课程内容、任务和活动，以及与讲师或者课程参与者讨论的音频或视频。</p>
+<p>除此之外，为了创建一个反映整个社区情况的课程，期待参与者增加他们自己的贡献，并公开彼此分享，通过这种作法建立自己的知识和学习社区。</p>
+<p>课程的目的并不是要让参与者学习或者记住一些内容。每个人都带着自己的学习目标进入课程。</p>
+<p>在一个大规模的在线公开课中，内容比任何个人都多，更不用说记忆了。因此，每个人在课程中的体验是独一无二的，参与者的互动受每个人对这些材料的个人视角所驱动。</p>
+<p>关联主义课程的学习是新兴的，它不是被定义、转移或者传递的，而是通过个人经验和互动过程创造的。对于课程中的每个人来说，这门课是新的、与众不同的；在更广泛、更社会化的意义上，它也是整个课程的结果。</p>
+<h2 id="0-E-learning-1-and-2"><a href="#0-E-learning-1-and-2" class="headerlink" title="0. E-learning 1 and 2"></a><a href="https://el30.mooc.ca/cgi-bin/page.cgi?module=4" target="_blank" rel="noopener">0. E-learning 1 and 2</a></h2><p>我们正在进入万维网的第三个阶段，它将重新定义在线学习(online learning)。</p>
+<p>第一阶段的互联网(web 1.0)最初发展于 1994 年，基于客户端-服务器模式，侧重于网页和文件处理。</p>
+<p>第二阶段 web 2.0 时代，创建了一个基于数据和平台互操作性的网络。</p>
+<p>互联网第三阶段 web 3.0，平台所发挥的中心作用被削弱，倾向于同行之间的直接交互，也就是分布式网络。</p>
+<p>第一代网络由内容管理服务（content management services, CMS）主导，从简单的网页服务器到数据库驱动。学习管理服务（learning management services, LMS）是一个具有教育意图的 CMS. 第二代互联网服务的兴起使得人们可以互相交换内容和媒体。</p>
+<p>这个课程将介绍第三代互联网 web3.0, 以及对在线学习的影响。在 web3.0, 我们看到云技术、分布式网络技术的广泛应用，以及开放数据和个人加密技术。</p>
+<p>web3.0 的内容看起来很像 web1.0 和 web2.0，仍然会有文件、网页、视频。但是这些媒介将通过分布式内容网络进行获取，通过散列算法(hash algorithms)和数字密钥(digital keys)加密，并且可以动态地实时更新内容。我们将访问分布式应用程序，从而使我们可以获得数据流。这些数据流可能是数字货币、在线体育广播、政府统计资料或者学习应用程序。</p>
+<p>在 web3.0 时代，通过这些<strong>分布式资源学习</strong>，这会是一个导航、混合、重组资源、并将他们应用于真实的挑战和现实世界问题的过程。一方面，e-learning 3.0 将以个人自身利益为出发点培养个人技能；另一方面，与同事和同行合作开展工作和学习，在就业和业绩支持网络内培养能力。</p>
+<p>大规模网络公开课（MOOC）介于 web2.0 和 web3.0 之间。它期望在资源和个人课程开发和管理方面建立去中心化的网络，但它依赖于社交网络和在线学习平台等 web2.0 工具。</p>
+<p>因此，虽然在线学习3.0(e-learning 3.0)在很多方面预计使用连接主义的学习形式，但工具、过程、结果都是新的。这门课程成为一组链接数据源，其中的链接不仅由教育机构定义，而且由参与者和学习者定义，并且来源从多样的环境中提取和传递到多重环境中。</p>
+<p>在这节课的演讲视频「<a href="https://el30.mooc.ca/cgi-bin/page.cgi?event=77" target="_blank" rel="noopener">E-Learning3.0——下一波新兴学习技术的影响</a>」里，Stephen Downes 概括性的介绍了 E-Learing3.0 的 9 个核心概念：</p>
+<ol>
+<li>Data</li>
+<li>Cloud</li>
+<li>Graph</li>
+<li>Community</li>
+<li>Identity</li>
+<li>Resources</li>
+<li>Recognition</li>
+<li>Experience</li>
+<li>Agency</li>
+</ol>
+<h3 id="Q1：分布式（distributed）和去中心化（decentralized）之间的关系是什么？"><a href="#Q1：分布式（distributed）和去中心化（decentralized）之间的关系是什么？" class="headerlink" title="Q1：分布式（distributed）和去中心化（decentralized）之间的关系是什么？"></a>Q1：分布式（distributed）和去中心化（decentralized）之间的关系是什么？</h3><p>根据文章 <em><a href="https://medium.com/distributed-economy/what-is-the-difference-between-decentralized-and-distributed-systems-f4190a5c6462" target="_blank" rel="noopener">What is the difference between decentralized and distributed systems? </a></em>，去中心化系统是分布式系统的子集。两者主要的区别在于 如何/在何处做「决策」，以及信息如何在系统里通过控制节点共享。<br><img src="https://i.loli.net/2018/10/21/5bcc8596ee6bf.jpeg" alt="1_nnpzTe1hx74WKICL3Gj34A.jpeg"></p>
+<blockquote>
+<p>Decentralized means that there is no single point where the decision is made. Every node makes a decision for it’s own behaviour and the resulting system behaviour is the aggregate response.</p>
+</blockquote>
+<p><strong>去中心化意味着没有单一节点做决策。每个节点决定自己的行为，结果系统行为是聚合响应。</strong></p>
+<blockquote>
+<p>Distributed means that the processing is shared across multiple nodes, but the decisions may still be centralized and use complete system knowledge.</p>
+</blockquote>
+<p><strong>分布式意味着在多点之间共享，但是决策可能仍然中心化，并使用完整系统知识。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://rosescats.github.io/2018/10/20/learning/e-learning-30/" data-id="cju42qpo4002kkft52ju7wwwh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/el30/">el30</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/learn/">learn</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/reading/">reading</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/resources/">resources</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/translation/">translation</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/图片/">图片</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/思考/">思考</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/游记/">游记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/电影/">电影</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/PDF分割/" style="font-size: 10px;">PDF分割</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/XMind-ZEN/" style="font-size: 10px;">XMind ZEN</a> <a href="/tags/el30/" style="font-size: 20px;">el30</a> <a href="/tags/learning/" style="font-size: 10px;">learning</a> <a href="/tags/主动学习/" style="font-size: 10px;">主动学习</a> <a href="/tags/分享/" style="font-size: 10px;">分享</a> <a href="/tags/图片/" style="font-size: 10px;">图片</a> <a href="/tags/处理信息/" style="font-size: 10px;">处理信息</a> <a href="/tags/备份/" style="font-size: 10px;">备份</a> <a href="/tags/开平仓东/" style="font-size: 10px;">开平仓东</a> <a href="/tags/注意力/" style="font-size: 10px;">注意力</a> <a href="/tags/生命教育/" style="font-size: 10px;">生命教育</a> <a href="/tags/生活/" style="font-size: 10px;">生活</a> <a href="/tags/电影/" style="font-size: 10px;">电影</a> <a href="/tags/睡眠/" style="font-size: 10px;">睡眠</a> <a href="/tags/记录/" style="font-size: 10px;">记录</a> <a href="/tags/资源/" style="font-size: 10px;">资源</a> <a href="/tags/隐私安全/" style="font-size: 20px;">隐私安全</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/05/2019-04-05-hidden-xmind-zen-watermark/">XMind ZEN 隐藏导出水印的方法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/12/2019-02-12-rip-do-not-track-ignored-zh/">翻译：大家忽视了「不要跟踪」隐私标准</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/02/winter-hometown/">无题旧图</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/24/learning/e-learning-30-resource/">资源｜E-Learning 3.0 MOOC</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/22/twitter-likes-resources-wiki/">Twitter 收藏的各种资源整理</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 rose<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
